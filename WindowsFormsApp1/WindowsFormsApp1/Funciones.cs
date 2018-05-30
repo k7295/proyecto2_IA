@@ -74,16 +74,19 @@ namespace WindowsFormsApp1
                     titulo_tabla.Text = "Agentes";
                     picture_amarillo.Visible = true;
                     mostrarAgentes.Image = global::WindowsFormsApp1.Properties.Resources.amarillo;
-                
+                   List<string> nombre_columnas_agentes = funcionesXML.get_columns_agentes(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\agentes.xml");
+                    
+                   // List<List<string>> informacion_agentes = funcionesXML.read_agenteXML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\servicios.xml", "Servicios");
+
                     break;
                 case "mostrar servicios":
                     Console.WriteLine("mostrar servicios");
                     titulo_tabla.Text = "Servicios";
                     picture_naranja.Visible = true;
                     mostrarServicios.Image = global::WindowsFormsApp1.Properties.Resources.naranja;
-                    List<string> nombre_columnas = funcionesXML.get_columns(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\servicios.xml", "Servicios");
-                    List<List<string>> informacion = funcionesXML.readXML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\servicios.xml", "Servicios");
-                    dataGridView1.DataSource = set_tabla(nombre_columnas, informacion);
+                  //  List<string> nombre_columnas = funcionesXML.get_columns(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\servicios.xml", "Servicios");
+                   // List<List<string>> informacion = funcionesXML.readXML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\servicios.xml", "Servicios");
+                    //dataGridView1.DataSource = set_tabla(nombre_columnas, informacion);
                     break;
                 case "repartir ordenes":
                     Console.WriteLine("repartir ordenes");

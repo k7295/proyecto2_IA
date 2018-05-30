@@ -106,6 +106,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agente.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
