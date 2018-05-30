@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Servicios>
+   <Servicio>
+      <Codigo>ICE</Codigo>
+      <Nombre>Instalacion de cocina eléctrica</Nombre>
+      <DuracionPromedio>2</DuracionPromedio>
+      <Comision>250</Comision>
+   </Servicio>
+   <Servicio>
+      <Codigo>ICG</Codigo>
+      <Nombre>Instalación de cocina de gas</Nombre>
+      <DuracionPromedio>4</DuracionPromedio>
+      <Comision>400</Comision>
+   </Servicio>
+   <Servicio>
+      <Codigo>ILA</Codigo>
+      <Nombre>Instalacion de lavadora automática</Nombre>
+      <DuracionPromedio>1</DuracionPromedio>
+      <Comision>200</Comision>
+   </Servicio>
+   <Servicio>
+      <Codigo>RCE</Codigo>
+      <Nombre>Reparación de cocina eléctica</Nombre>
+      <DuracionPromedio>4</DuracionPromedio>
+      <Comision>300</Comision>
+   </Servicio>
+   <Servicio>
+      <Codigo>RCG</Codigo>
+      <Nombre>Reparación de cocina de gas</Nombre>
+      <DuracionPromedio>6</DuracionPromedio>
+      <Comision>500</Comision>
+   </Servicio>
+   <Servicio>
+      <Codigo>RLA</Codigo>
+      <Nombre>Reparación de lavadora automática</Nombre>
+      <DuracionPromedio>6</DuracionPromedio>
+      <Comision>250</Comision>
+   </Servicio>
+</Servicios>
