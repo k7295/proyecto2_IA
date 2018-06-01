@@ -7,7 +7,7 @@ using System.Xml;
 namespace WindowsFormsApp1
 {
    
-    public class Program
+    public class Manejador_XML
     {
         List<string> servicios = new List<string>(new string[] { "ICE", "ICG", "ILA", "RCE", "RCG", "RLA" }) ;
         List<string> nombre_agentes = new List<string>(new string[] { "Fulano Mengano","Colton Ramos","Stuart Mcguire",
@@ -29,6 +29,25 @@ namespace WindowsFormsApp1
                                                        "Raphael Valenzuela","Tobias Wiggins","Gabriel Short","Zeph Santiago","Dennis Young","Xavier Morrow"});
         Random rnd = new Random();
 
+        private List<string> RandomNombres(List<string> list_nombres)
+        {
+      
+            List<string> nombresClientes = new List<string>();
+            while (nombresClientes.Count < 50)
+            {
+                int index = rnd.Next(0, 98);
+
+                if (!nombresClientes.Contains(list_nombres.ElementAt(index)))
+                {
+                    nombresClientes.Add(list_nombres.ElementAt(index));
+                }
+            }
+            
+            imprimirLista(nombresClientes);
+            return nombresClientes;
+        }
+
+
         private void crear_agentesXML()
         {
             XmlTextWriter writer = new XmlTextWriter(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\agentes.xml", System.Text.Encoding.UTF8);
@@ -36,18 +55,37 @@ namespace WindowsFormsApp1
             writer.Formatting = Formatting.Indented;
             writer.Indentation = 2;
             writer.WriteStartElement("Agentes");
-            for (int i = 0; i <= nombre_agentes.Count - 1; i++)
+            for (int i = 0; i < nombre_agentes.Count; i++)
             {
-                createNode(i.ToString(), nombre_agentes[i], servicios_x_agentes(), writer);
+                createNodeAgente(i.ToString(), nombre_agentes[i], servicios_x_agentes(), writer);
             }
-               
             writer.WriteEndElement();
             writer.WriteEndDocument();
             writer.Close();
-            MessageBox.Show("XML File created ! ");
-        } 
+            Console.WriteLine("XML File created !");
+        }
 
-        private void createNode(string pID, string pName, List<string> pServicios, XmlTextWriter writer)
+        private void crear_ClienteXML()
+        {
+            List<string> nombre_clientes = RandomNombres(nombre_agentes);
+            XmlTextWriter writer = new XmlTextWriter(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\clientes.xml", System.Text.Encoding.UTF8);
+            writer.WriteStartDocument(true);
+            writer.Formatting = Formatting.Indented;
+            writer.Indentation = 2;
+            writer.WriteStartElement("Clientes");
+            
+            for (int i = 0; i < nombre_clientes.Count; i++)
+            {
+                int index = rnd.Next(0, 5);
+                createNodeCliente(i.ToString(), nombre_clientes[i], servicios.ElementAt(index), writer);
+            }
+
+            writer.WriteEndElement();
+            writer.WriteEndDocument();
+            writer.Close();
+            Console.WriteLine("XML File created !");
+        }
+        private void createNodeAgente(string pID, string pName, List<string> pServicios, XmlTextWriter writer)
         {
             writer.WriteStartElement("Agente");
             writer.WriteStartElement("ID");
@@ -59,7 +97,7 @@ namespace WindowsFormsApp1
             writer.WriteStartElement("Codigos_de_Servicios");
             for (int i = 0; i <= pServicios.Count - 1; i++)
             {
-                writer.WriteStartElement("Codigo");
+                writer.WriteStartElement("Codigo"+i);
                 writer.WriteString(pServicios[i]);
                 writer.WriteEndElement();
             }
@@ -68,16 +106,31 @@ namespace WindowsFormsApp1
             writer.WriteEndElement();
         }
 
+        private void createNodeCliente(string pID, string pName, string pServicios, XmlTextWriter writer)
+        {
+            writer.WriteStartElement("Cliente");
+            writer.WriteStartElement("ID");
+            writer.WriteString(pID);
+            writer.WriteEndElement();
+            writer.WriteStartElement("Nombre");
+            writer.WriteString(pName);
+            writer.WriteEndElement();
+            writer.WriteStartElement("Codigo_de_Servicio");
+            writer.WriteString(pServicios);
+            writer.WriteEndElement();
+            writer.WriteEndElement();
+        }
 
 
-        public List<List<Agente>> read_agenteXML(string archivo,string TagName)
+
+        public List<Agente> read_agenteXML(string archivo,string TagName)
         {
           
             List<List<Agente>> datos_objeto = new List<List<Agente>>();
             XmlDocument doc = new XmlDocument();
             doc.Load(archivo);
             XmlNodeList xmlnode = doc.GetElementsByTagName(TagName);
-      
+            List<Agente> lista_agentes = new List<Agente>();
 
             for (int i = 0; i <= xmlnode.Count - 1; i++)
             {
@@ -86,14 +139,13 @@ namespace WindowsFormsApp1
                 for (int j = 0; j <= nodes_agentes.Count - 1; j++)
                 {
                     XmlNodeList nodes = nodes_agentes[j].ChildNodes;
-                    List<Agente> elemento = new List<Agente>();
+                    
                     Agente agente = new Agente();
 
                     for (int k = 0; k <= nodes.Count - 1; k++)
                     {
                         
                         XmlNodeList nodes_servicios = nodes[k].ChildNodes;
-                        List<string> datos = new List<string>();
                         List<string> servicioxagente = new List<string>();
 
                         if (nodes.Item(k).Name == "ID")
@@ -108,7 +160,7 @@ namespace WindowsFormsApp1
                         {
                             for (int l = 0; l <= nodes_servicios.Count - 1; l++)
                             {
-                                //Console.WriteLine(nodes_servicios.Item(l).InnerText.Trim());
+                           
                                 servicioxagente.Add(nodes_servicios.Item(l).InnerText.Trim());
 
                             }
@@ -117,47 +169,58 @@ namespace WindowsFormsApp1
 
                     }
                     agente.toString();
-                    elemento.Add(agente);
-                    datos_objeto.Add(elemento);
+                    lista_agentes.Add(agente);
+                   
                 }
             }
 
-            imprimirLista_agentes(datos_objeto);
-            return datos_objeto;
+            imprimirLista_agentes(lista_agentes);
+            return lista_agentes;
         }
 
-        //public List<List<string>> read_XML(string archivo, string TagName)
-        //{
+        public List<Orden> read_clienteXML(string archivo, string TagName)
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load(archivo);
+            XmlNodeList xmlnode = doc.GetElementsByTagName(TagName);
+            List<Orden> lista_ordenes = new List<Orden>();
 
-        //    List<List<string>> datos_objeto = new List<List<string>>();
-        //    XmlDocument doc = new XmlDocument();
-        //    doc.Load(archivo);
-        //    XmlNodeList xmlnode = doc.GetElementsByTagName(TagName);
+            for (int i = 0; i <= xmlnode.Count - 1; i++)
+            {
+                XmlNodeList nodes_ordenes = xmlnode[i].ChildNodes;
 
+                for (int j = 0; j <= nodes_ordenes.Count - 1; j++)
+                {
+                    XmlNodeList nodes = nodes_ordenes[j].ChildNodes;
 
-        //    for (int i = 0; i <= xmlnode.Count - 1; i++)
-        //    {
-        //        XmlNodeList nodes_servicios = xmlnode[i].ChildNodes;
+                    Orden orden = new Orden();
 
-        //        for (int j = 0; j <= nodes_servicios.Count - 1; j++)
-        //        {
-        //            XmlNodeList nodes = nodes_servicios[j].ChildNodes;
-        //            List<string> elemento = new List<string>();
+                    for (int k = 0; k <= nodes.Count - 1; k++)
+                    {
 
-        //            for (int k = 0; k <= nodes.Count - 1; k++)
-        //            {
-        //                List<string> datos = new List<string>();
-        //                datos.Add(nodes.Item(k).InnerText.Trim());
-        //                elemento.Add(nodes.Item(k).InnerText.Trim());
+                        if (nodes.Item(k).Name == "ID")
+                        {
+                            orden.ID1 = nodes.Item(k).InnerText.Trim();
+                        }
+                        if (nodes.Item(k).Name == "Nombre")
+                        {
+                            orden.Nombre = nodes.Item(k).InnerText.Trim();
+                        }
+                        if (nodes.Item(k).Name == "Codigo_de_Servicio")
+                        {
+                            orden.Servicio = nodes.Item(k).InnerText.Trim();
+                        }
 
-        //            }
-        //            datos_objeto.Add(elemento);
-        //        }
-        //    }
+                    }
+                    orden.toString();
+                    lista_ordenes.Add(orden);
 
-        //    imprimirLista_listas(datos_objeto);
-        //    return datos_objeto;
-        //}
+                }
+            }
+            Console.WriteLine("'''''''''''''''''''");
+            imprimirLista_orden(lista_ordenes);
+            return lista_ordenes;
+        }
 
         public List<string> get_columns_agentes(string archivo)
         {
@@ -189,11 +252,43 @@ namespace WindowsFormsApp1
 
             }
 
+            Console.WriteLine("----------------------");
             imprimirLista(nombre_columnas);
             return nombre_columnas;
 
         }
 
+        public List<string> get_columns_ordenes(string archivo)
+        {
+            List<string> nombre_columnas = new List<string>();
+            XmlTextReader xmlReader = new XmlTextReader(archivo);
+
+            while (xmlReader.Read())
+            {
+                if (xmlReader.NodeType == XmlNodeType.Element)
+                {
+                    if (xmlReader.Name != "Clientes")
+                    {
+                        if (xmlReader.Name != "Cliente")
+                        {
+                            if (!nombre_columnas.Contains(xmlReader.Name))
+                            {
+                                nombre_columnas.Add(xmlReader.Name);
+                            }
+                        }
+
+
+                    }
+
+                }
+
+            }
+
+            Console.WriteLine("----------------------");
+            imprimirLista(nombre_columnas);
+            return nombre_columnas;
+
+        }
         public void imprimirLista(List<string> lista) {
             for (int i = 0; i < lista.Count; i++)
             {
@@ -201,31 +296,19 @@ namespace WindowsFormsApp1
             }
         }
 
-        public void imprimirLista_agentes(List<List<Agente>> lista)
+        public void imprimirLista_agentes(List<Agente> lista)
         {
-            for (int i = 0; i < lista.Count; i++)
-            {   
-
-                for (int j = 0; j < lista[i].Count; j++)
+                for (int j = 0; j < lista.Count; j++)
                 {
-                    lista[i][j].ToString();
+                    lista[j].ToString();
                 }
-            }
         }
 
-        public void imprimirLista_listas(List<List<string>> lista)
+        public void imprimirLista_orden(List<Orden> lista)
         {
-            for (int i = 0; i < lista.Count; i++)
+            for (int j = 0; j < lista.Count; j++)
             {
-                Console.WriteLine("'''''''''''''''''''''''''''''''''''''''''''''''''''");
-
-                for (int j = 0; j < lista[i].Count; j++)
-                {
-                   
-                        Console.WriteLine("/" + lista[i][j]);
-                 
-                }
-
+                lista[j].ToString();
             }
         }
 
@@ -234,7 +317,7 @@ namespace WindowsFormsApp1
             
             List<string> serviciosAgente = new List<string>();
             Console.WriteLine(serviciosAgente.Count);
-            while(serviciosAgente.Count < 4)
+            while(serviciosAgente.Count < 3)
             {
                 int index = rnd.Next(0, 5);
               
@@ -251,15 +334,16 @@ namespace WindowsFormsApp1
         }
         static void Main()
         {
-            Program p = new Program();
-            //p.crear_agentesXML();
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Principal());
+            Manejador_XML p = new Manejador_XML();
+            p.crear_agentesXML();
+            p.crear_ClienteXML();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Principal());
 
             //p.servicios_x_agentes();
-            p.read_agenteXML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\agentes.xml", "Agentes");
-            p.get_columns_agentes(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\agentes.xml");
+            //p.read_clienteXML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\clientes.xml", "Clientes");
+            //p.get_columns_ordenes(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\clientes.xml");
             //p.add_servicios_XML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\servicios.xml", "Servicios");
 
 

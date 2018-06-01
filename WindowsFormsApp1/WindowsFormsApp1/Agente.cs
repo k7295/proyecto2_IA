@@ -33,10 +33,22 @@ namespace WindowsFormsApp1
             }
         }
 
+        
+        public string toString_servicios()
+        {
+            string servicios = "";
+            for (int i = 0; i < this.Servicios.Count; i++)
+            {
+                Console.WriteLine("/" +this.Servicios[i]);
+                servicios += this.Servicios[i] + ", ";
+            }
+            return servicios;
+        }
+
         public void toString()
         {
             Console.WriteLine("id:" + this.ID1 + " nombre: " + this.Nombre + " servicios: ");
-           imprimirLista(this.Servicios);
+            imprimirLista(this.Servicios);
         }
 
     }

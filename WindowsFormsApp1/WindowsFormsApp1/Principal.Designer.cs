@@ -132,6 +132,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Titulo_GE);
             this.Controls.Add(this.picture_rojo);
+            this.MaximizeBox = false;
             this.Name = "Principal";
             this.Text = "General Electric";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

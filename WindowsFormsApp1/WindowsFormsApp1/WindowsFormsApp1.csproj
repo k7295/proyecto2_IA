@@ -107,6 +107,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Agente.cs" />
+    <Compile Include="Manejador_XML.cs" />
+    <Compile Include="Orden.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,7 +121,6 @@
     <Compile Include="Funciones.Designer.cs">
       <DependentUpon>Funciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Funciones.resx">
       <DependentUpon>Funciones.cs</DependentUpon>
