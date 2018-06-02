@@ -54,12 +54,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe Script", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(125, 94);
+            this.label1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(218, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(556, 38);
+            this.label1.Size = new System.Drawing.Size(363, 28);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Aplicación para distribución de servicios";
+            this.label1.Text = "Service Distribution System";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label2
             // 
@@ -67,9 +68,9 @@
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(24, 202);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(326, 26);
+            this.label2.Size = new System.Drawing.Size(275, 26);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Escucha con atención las instrucciones";
+            this.label2.Text = "Please follow all the instructions";
             // 
             // textBox_temporal
             // 
@@ -84,7 +85,7 @@
             this.boton_temporal.Name = "boton_temporal";
             this.boton_temporal.Size = new System.Drawing.Size(99, 21);
             this.boton_temporal.TabIndex = 6;
-            this.boton_temporal.Text = "button1";
+            this.boton_temporal.Text = "Accept";
             this.boton_temporal.UseVisualStyleBackColor = true;
             this.boton_temporal.Click += new System.EventHandler(this.boton_temporal_Click);
             // 
@@ -94,9 +95,9 @@
             this.label_iniciar.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_iniciar.Location = new System.Drawing.Point(366, 327);
             this.label_iniciar.Name = "label_iniciar";
-            this.label_iniciar.Size = new System.Drawing.Size(71, 23);
+            this.label_iniciar.Size = new System.Drawing.Size(56, 23);
             this.label_iniciar.TabIndex = 4;
-            this.label_iniciar.Text = "Iniciar";
+            this.label_iniciar.Text = "Start";
             this.label_iniciar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1

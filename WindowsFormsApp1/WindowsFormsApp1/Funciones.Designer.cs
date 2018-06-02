@@ -56,9 +56,9 @@
             this.label_opciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_opciones.Location = new System.Drawing.Point(873, 10);
             this.label_opciones.Name = "label_opciones";
-            this.label_opciones.Size = new System.Drawing.Size(152, 37);
+            this.label_opciones.Size = new System.Drawing.Size(128, 37);
             this.label_opciones.TabIndex = 0;
-            this.label_opciones.Text = "Opciones";
+            this.label_opciones.Text = "Options";
             // 
             // repartirOrdenes
             // 
@@ -66,9 +66,9 @@
             this.repartirOrdenes.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.repartirOrdenes.Location = new System.Drawing.Point(863, 368);
             this.repartirOrdenes.Name = "repartirOrdenes";
-            this.repartirOrdenes.Size = new System.Drawing.Size(180, 33);
+            this.repartirOrdenes.Size = new System.Drawing.Size(143, 33);
             this.repartirOrdenes.TabIndex = 5;
-            this.repartirOrdenes.Text = "Repartir ordenes";
+            this.repartirOrdenes.Text = "Begin Orders";
             // 
             // mostrarServicios
             // 
@@ -76,9 +76,9 @@
             this.mostrarServicios.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mostrarServicios.Location = new System.Drawing.Point(959, 234);
             this.mostrarServicios.Name = "mostrarServicios";
-            this.mostrarServicios.Size = new System.Drawing.Size(183, 33);
+            this.mostrarServicios.Size = new System.Drawing.Size(151, 33);
             this.mostrarServicios.TabIndex = 2;
-            this.mostrarServicios.Text = "Mostrar Servicios";
+            this.mostrarServicios.Text = "Show Services";
             // 
             // mostrarAgentes
             // 
@@ -87,9 +87,9 @@
             this.mostrarAgentes.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mostrarAgentes.Location = new System.Drawing.Point(867, 101);
             this.mostrarAgentes.Name = "mostrarAgentes";
-            this.mostrarAgentes.Size = new System.Drawing.Size(176, 33);
+            this.mostrarAgentes.Size = new System.Drawing.Size(141, 33);
             this.mostrarAgentes.TabIndex = 1;
-            this.mostrarAgentes.Text = "Mostrar Agentes";
+            this.mostrarAgentes.Text = "Show Agents";
             this.mostrarAgentes.Click += new System.EventHandler(this.mostrarAgentes_Click);
             // 
             // boton_temporal
@@ -98,7 +98,7 @@
             this.boton_temporal.Name = "boton_temporal";
             this.boton_temporal.Size = new System.Drawing.Size(99, 21);
             this.boton_temporal.TabIndex = 10;
-            this.boton_temporal.Text = "button1";
+            this.boton_temporal.Text = "Accept";
             this.boton_temporal.UseVisualStyleBackColor = true;
             this.boton_temporal.Click += new System.EventHandler(this.boton_temporal_Click);
             // 
@@ -135,11 +135,11 @@
             // 
             this.Ayuda.AutoSize = true;
             this.Ayuda.Font = new System.Drawing.Font("Segoe Print", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ayuda.Location = new System.Drawing.Point(1093, 489);
+            this.Ayuda.Location = new System.Drawing.Point(1010, 467);
             this.Ayuda.Name = "Ayuda";
-            this.Ayuda.Size = new System.Drawing.Size(96, 42);
+            this.Ayuda.Size = new System.Drawing.Size(191, 42);
             this.Ayuda.TabIndex = 12;
-            this.Ayuda.Text = "Ayuda";
+            this.Ayuda.Text = "Instructions(?)";
             // 
             // picture_amarillo
             // 
@@ -174,7 +174,7 @@
             // ayuda_colores
             // 
             this.ayuda_colores.Image = global::WindowsFormsApp1.Properties.Resources.ayuda;
-            this.ayuda_colores.Location = new System.Drawing.Point(1082, 459);
+            this.ayuda_colores.Location = new System.Drawing.Point(1046, 446);
             this.ayuda_colores.Name = "ayuda_colores";
             this.ayuda_colores.Size = new System.Drawing.Size(117, 82);
             this.ayuda_colores.TabIndex = 13;
