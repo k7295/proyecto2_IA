@@ -57,7 +57,7 @@ namespace WindowsFormsApp1
         public DataTable set_tabla_agentes(List<string> nombreColumnas, List<Agente> informacion)
 =======
             Choices commands = new Choices();
-            commands.Add(new string[] { "show agents", "show services", "begin orders","help" });
+            commands.Add(new string[] { "show agents", "show services", "begin orders","instructionss" });
             gBuilder = new GrammarBuilder();
             gBuilder.Append(commands);
 
@@ -123,7 +123,7 @@ namespace WindowsFormsApp1
                     repartirOrdenes.Image = global::WindowsFormsApp1.Properties.Resources.verde;
                     picture_verde.Visible = true;
                     break;
-                case "help":
+                case "instructions":
                     Ayuda.Image = global::WindowsFormsApp1.Properties.Resources.ayuda;
                     ayuda_colores.Visible = true;
                     pBuild.AppendText("The instructions are, show agents, show services, and begin orders");
