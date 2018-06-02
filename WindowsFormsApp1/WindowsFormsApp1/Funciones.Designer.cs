@@ -57,10 +57,15 @@ namespace WindowsFormsApp1
             // label_opciones
             // 
             this.label_opciones.AutoSize = true;
+<<<<<<< HEAD
             this.label_opciones.Font = new System.Drawing.Font("Tempus Sans ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_opciones.Location = new System.Drawing.Point(852, 35);
+=======
+            this.label_opciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_opciones.Location = new System.Drawing.Point(873, 10);
+>>>>>>> edwin
             this.label_opciones.Name = "label_opciones";
-            this.label_opciones.Size = new System.Drawing.Size(144, 42);
+            this.label_opciones.Size = new System.Drawing.Size(152, 37);
             this.label_opciones.TabIndex = 0;
             this.label_opciones.Text = "Opciones";
             // 
@@ -94,6 +99,7 @@ namespace WindowsFormsApp1
             this.mostrarAgentes.Size = new System.Drawing.Size(176, 33);
             this.mostrarAgentes.TabIndex = 1;
             this.mostrarAgentes.Text = "Mostrar Agentes";
+            this.mostrarAgentes.Click += new System.EventHandler(this.mostrarAgentes_Click);
             // 
             // boton_temporal
             // 
