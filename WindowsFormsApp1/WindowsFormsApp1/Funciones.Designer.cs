@@ -31,9 +31,9 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label_opciones = new System.Windows.Forms.Label();
             this.repartirOrdenes = new System.Windows.Forms.Label();
             this.mostrarOrdenes = new System.Windows.Forms.Label();
@@ -57,12 +57,12 @@ namespace WindowsFormsApp1
             // label_opciones
             // 
             this.label_opciones.AutoSize = true;
-            this.label_opciones.Font = new System.Drawing.Font("Tempus Sans ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_opciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_opciones.Location = new System.Drawing.Point(852, 35);
             this.label_opciones.Name = "label_opciones";
-            this.label_opciones.Size = new System.Drawing.Size(144, 42);
+            this.label_opciones.Size = new System.Drawing.Size(128, 37);
             this.label_opciones.TabIndex = 0;
-            this.label_opciones.Text = "Opciones";
+            this.label_opciones.Text = "Options";
             // 
             // repartirOrdenes
             // 
@@ -70,9 +70,9 @@ namespace WindowsFormsApp1
             this.repartirOrdenes.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.repartirOrdenes.Location = new System.Drawing.Point(784, 411);
             this.repartirOrdenes.Name = "repartirOrdenes";
-            this.repartirOrdenes.Size = new System.Drawing.Size(180, 33);
+            this.repartirOrdenes.Size = new System.Drawing.Size(139, 33);
             this.repartirOrdenes.TabIndex = 5;
-            this.repartirOrdenes.Text = "Repartir ordenes";
+            this.repartirOrdenes.Text = "Begin orders";
             // 
             // mostrarOrdenes
             // 
@@ -80,9 +80,9 @@ namespace WindowsFormsApp1
             this.mostrarOrdenes.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mostrarOrdenes.Location = new System.Drawing.Point(880, 277);
             this.mostrarOrdenes.Name = "mostrarOrdenes";
-            this.mostrarOrdenes.Size = new System.Drawing.Size(179, 33);
+            this.mostrarOrdenes.Size = new System.Drawing.Size(137, 33);
             this.mostrarOrdenes.TabIndex = 2;
-            this.mostrarOrdenes.Text = "Mostrar Ordenes";
+            this.mostrarOrdenes.Text = "Show orders";
             // 
             // mostrarAgentes
             // 
@@ -91,9 +91,10 @@ namespace WindowsFormsApp1
             this.mostrarAgentes.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mostrarAgentes.Location = new System.Drawing.Point(787, 139);
             this.mostrarAgentes.Name = "mostrarAgentes";
-            this.mostrarAgentes.Size = new System.Drawing.Size(176, 33);
+            this.mostrarAgentes.Size = new System.Drawing.Size(141, 33);
             this.mostrarAgentes.TabIndex = 1;
-            this.mostrarAgentes.Text = "Mostrar Agentes";
+            this.mostrarAgentes.Text = "Show Agents";
+            this.mostrarAgentes.Click += new System.EventHandler(this.mostrarAgentes_Click);
             // 
             // boton_temporal
             // 
@@ -101,7 +102,7 @@ namespace WindowsFormsApp1
             this.boton_temporal.Name = "boton_temporal";
             this.boton_temporal.Size = new System.Drawing.Size(99, 21);
             this.boton_temporal.TabIndex = 10;
-            this.boton_temporal.Text = "button1";
+            this.boton_temporal.Text = "Accept";
             this.boton_temporal.UseVisualStyleBackColor = true;
             this.boton_temporal.Click += new System.EventHandler(this.boton_temporal_Click);
             // 
@@ -119,29 +120,29 @@ namespace WindowsFormsApp1
             this.tabla_info.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tabla_info.BackgroundColor = System.Drawing.Color.White;
             this.tabla_info.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 13F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabla_info.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 13F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabla_info.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tabla_info.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 11F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tabla_info.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 11F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabla_info.DefaultCellStyle = dataGridViewCellStyle2;
             this.tabla_info.Location = new System.Drawing.Point(19, 101);
             this.tabla_info.Margin = new System.Windows.Forms.Padding(10);
             this.tabla_info.Name = "tabla_info";
             this.tabla_info.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.tabla_info.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.tabla_info.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.tabla_info.Size = new System.Drawing.Size(614, 444);
             this.tabla_info.TabIndex = 11;
             // 
@@ -149,11 +150,11 @@ namespace WindowsFormsApp1
             // 
             this.Ayuda.AutoSize = true;
             this.Ayuda.Font = new System.Drawing.Font("Segoe Print", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ayuda.Location = new System.Drawing.Point(1012, 502);
+            this.Ayuda.Location = new System.Drawing.Point(907, 503);
             this.Ayuda.Name = "Ayuda";
-            this.Ayuda.Size = new System.Drawing.Size(96, 42);
+            this.Ayuda.Size = new System.Drawing.Size(191, 42);
             this.Ayuda.TabIndex = 12;
-            this.Ayuda.Text = "Ayuda";
+            this.Ayuda.Text = "Instructions(?)";
             // 
             // picture_amarillo
             // 
@@ -188,7 +189,7 @@ namespace WindowsFormsApp1
             // ayuda_colores
             // 
             this.ayuda_colores.Image = global::WindowsFormsApp1.Properties.Resources.ayuda;
-            this.ayuda_colores.Location = new System.Drawing.Point(1001, 472);
+            this.ayuda_colores.Location = new System.Drawing.Point(951, 479);
             this.ayuda_colores.Name = "ayuda_colores";
             this.ayuda_colores.Size = new System.Drawing.Size(117, 82);
             this.ayuda_colores.TabIndex = 13;
