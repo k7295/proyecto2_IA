@@ -42,11 +42,11 @@ namespace WindowsFormsApp1
             this.textBox_temporal = new System.Windows.Forms.TextBox();
             this.tabla_info = new System.Windows.Forms.DataGridView();
             this.Ayuda = new System.Windows.Forms.Label();
+            this.titulo_tabla = new System.Windows.Forms.Label();
             this.picture_amarillo = new System.Windows.Forms.PictureBox();
             this.picture_naranja = new System.Windows.Forms.PictureBox();
             this.picture_verde = new System.Windows.Forms.PictureBox();
             this.ayuda_colores = new System.Windows.Forms.PictureBox();
-            this.titulo_tabla = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_info)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_amarillo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_naranja)).BeginInit();
@@ -94,7 +94,7 @@ namespace WindowsFormsApp1
             this.mostrarAgentes.Size = new System.Drawing.Size(141, 33);
             this.mostrarAgentes.TabIndex = 1;
             this.mostrarAgentes.Text = "Show Agents";
-            this.mostrarAgentes.Click += new System.EventHandler(this.mostrarAgentes_Click);
+          
             // 
             // boton_temporal
             // 
@@ -152,49 +152,9 @@ namespace WindowsFormsApp1
             this.Ayuda.Font = new System.Drawing.Font("Segoe Print", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ayuda.Location = new System.Drawing.Point(907, 503);
             this.Ayuda.Name = "Ayuda";
-            this.Ayuda.Size = new System.Drawing.Size(191, 42);
+            this.Ayuda.Size = new System.Drawing.Size(160, 42);
             this.Ayuda.TabIndex = 12;
-            this.Ayuda.Text = "Instructions(?)";
-            // 
-            // picture_amarillo
-            // 
-            this.picture_amarillo.Image = global::WindowsFormsApp1.Properties.Resources.amarillo;
-            this.picture_amarillo.Location = new System.Drawing.Point(762, 107);
-            this.picture_amarillo.Name = "picture_amarillo";
-            this.picture_amarillo.Size = new System.Drawing.Size(234, 112);
-            this.picture_amarillo.TabIndex = 6;
-            this.picture_amarillo.TabStop = false;
-            this.picture_amarillo.Visible = false;
-            // 
-            // picture_naranja
-            // 
-            this.picture_naranja.Image = global::WindowsFormsApp1.Properties.Resources.naranja;
-            this.picture_naranja.Location = new System.Drawing.Point(864, 241);
-            this.picture_naranja.Name = "picture_naranja";
-            this.picture_naranja.Size = new System.Drawing.Size(234, 112);
-            this.picture_naranja.TabIndex = 7;
-            this.picture_naranja.TabStop = false;
-            this.picture_naranja.Visible = false;
-            // 
-            // picture_verde
-            // 
-            this.picture_verde.Image = global::WindowsFormsApp1.Properties.Resources.verde;
-            this.picture_verde.Location = new System.Drawing.Point(763, 370);
-            this.picture_verde.Name = "picture_verde";
-            this.picture_verde.Size = new System.Drawing.Size(234, 112);
-            this.picture_verde.TabIndex = 8;
-            this.picture_verde.TabStop = false;
-            this.picture_verde.Visible = false;
-            // 
-            // ayuda_colores
-            // 
-            this.ayuda_colores.Image = global::WindowsFormsApp1.Properties.Resources.ayuda;
-            this.ayuda_colores.Location = new System.Drawing.Point(951, 479);
-            this.ayuda_colores.Name = "ayuda_colores";
-            this.ayuda_colores.Size = new System.Drawing.Size(117, 82);
-            this.ayuda_colores.TabIndex = 13;
-            this.ayuda_colores.TabStop = false;
-            this.ayuda_colores.Visible = false;
+            this.Ayuda.Text = "Instructions";
             // 
             // titulo_tabla
             // 
@@ -206,6 +166,43 @@ namespace WindowsFormsApp1
             this.titulo_tabla.TabIndex = 15;
             this.titulo_tabla.Text = "label1";
             this.titulo_tabla.Visible = false;
+            // 
+            // picture_amarillo
+            // 
+            this.picture_amarillo.Location = new System.Drawing.Point(762, 107);
+            this.picture_amarillo.Name = "picture_amarillo";
+            this.picture_amarillo.Size = new System.Drawing.Size(234, 112);
+            this.picture_amarillo.TabIndex = 6;
+            this.picture_amarillo.TabStop = false;
+           
+            // 
+            // picture_naranja
+            // 
+            this.picture_naranja.Location = new System.Drawing.Point(864, 241);
+            this.picture_naranja.Name = "picture_naranja";
+            this.picture_naranja.Size = new System.Drawing.Size(234, 112);
+            this.picture_naranja.TabIndex = 7;
+            this.picture_naranja.TabStop = false;
+           
+            // 
+            // picture_verde
+            // 
+            this.picture_verde.Location = new System.Drawing.Point(763, 370);
+            this.picture_verde.Name = "picture_verde";
+            this.picture_verde.Size = new System.Drawing.Size(234, 112);
+            this.picture_verde.TabIndex = 8;
+            this.picture_verde.TabStop = false;
+           
+            // 
+            // ayuda_colores
+            // 
+            this.ayuda_colores.Image = global::WindowsFormsApp1.Properties.Resources.ayuda;
+            this.ayuda_colores.Location = new System.Drawing.Point(951, 479);
+            this.ayuda_colores.Name = "ayuda_colores";
+            this.ayuda_colores.Size = new System.Drawing.Size(117, 82);
+            this.ayuda_colores.TabIndex = 13;
+            this.ayuda_colores.TabStop = false;
+            this.ayuda_colores.Visible = false;
             // 
             // Funciones
             // 

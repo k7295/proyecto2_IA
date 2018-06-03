@@ -73,6 +73,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap amarillo_pastel {
+            get {
+                object obj = ResourceManager.GetObject("amarillo-pastel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap audio_icon {
             get {
                 object obj = ResourceManager.GetObject("audio_icon", resourceCulture);
@@ -163,6 +173,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap naranja_pastel {
+            get {
+                object obj = ResourceManager.GetObject("naranja_pastel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rojo {
             get {
                 object obj = ResourceManager.GetObject("rojo", resourceCulture);
@@ -186,6 +206,16 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap verde {
             get {
                 object obj = ResourceManager.GetObject("verde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap verde_pastel {
+            get {
+                object obj = ResourceManager.GetObject("verde_pastel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

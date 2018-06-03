@@ -36,7 +36,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             this.CenterToScreen();
-
+            colores_iniciales();
             Choices commands = new Choices();
             commands.Add(new string[] { "show agents", "show orders", "begin orders", "instructions" });
             gBuilder = new GrammarBuilder();
@@ -51,6 +51,7 @@ namespace WindowsFormsApp1
             recEngine.SpeechRecognized += recEngine_SpeechRecognized;
             agent = new Thread(agenteVoz);
             agent.Start();
+            //agent.Abort();
             //List<string> nombre_columnas = funcionesXML.get_columns(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\servicios.xml", "Servicios");
             //List<List<string>> informacion = funcionesXML.readXML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\servicios.xml", "Servicios");
             //List<Agente> informacion = p.read_agenteXML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\agentes.xml", "Agentes");
@@ -84,17 +85,17 @@ namespace WindowsFormsApp1
 
         public void recEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs er)
         {
-
+            resetOpciones();
             switch (er.Result.Text)
             {
                 case "show agents":
                     Console.WriteLine("mostrar agentes");
                     this.titulo_tabla.Visible = true;
-                    titulo_tabla.Text = "Agentes";
-                    picture_amarillo.Visible = true;
+                    titulo_tabla.Text = "Agents";
                     mostrarAgentes.Image = global::WindowsFormsApp1.Properties.Resources.amarillo;
-                    List<Agente> informacion = funcionesXML.read_agenteXML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\agentes.xml", "Agentes");
-                    List<string> nombre_columnas = funcionesXML.get_columns_agentes(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\agentes.xml");
+                    picture_amarillo.Image = global::WindowsFormsApp1.Properties.Resources.amarillo;
+                    List<Agente> informacion = funcionesXML.read_agenteXML(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\agentes.xml", "Agentes");
+                    List<string> nombre_columnas = funcionesXML.get_columns_agentes(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\agentes.xml");
                     tabla_info.DataSource = set_tabla_agentes(nombre_columnas, informacion);
 
 
@@ -102,23 +103,23 @@ namespace WindowsFormsApp1
                 case "show orders":
                     Console.WriteLine("mostrar ordenes");
                     this.titulo_tabla.Visible = true;
-                    titulo_tabla.Text = "Ordenes";
-                    picture_naranja.Visible = true;
+                    titulo_tabla.Text = "Orders";
                     mostrarOrdenes.Image = global::WindowsFormsApp1.Properties.Resources.naranja;
-                    List<Orden> informacion_ordenes = funcionesXML.read_clienteXML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\clientes.xml", "Clientes");
-                    List<string> nombre_columnas_ordenes = funcionesXML.get_columns_ordenes(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\clientes.xml");
+                    picture_naranja.Image = global::WindowsFormsApp1.Properties.Resources.naranja;
+                    List<Orden> informacion_ordenes = funcionesXML.read_clienteXML(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\clientes.xml", "Clientes");
+                    List<string> nombre_columnas_ordenes = funcionesXML.get_columns_ordenes(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\clientes.xml");
                     tabla_info.DataSource = set_tabla_ordenes(nombre_columnas_ordenes, informacion_ordenes);
                     break;
                 case "begin orders":
                     Console.WriteLine("repartir ordenes");
                     this.titulo_tabla.Visible = true;
-                    titulo_tabla.Text = "Repartir ordenes";
+                    titulo_tabla.Text = "Begin orders";
                     repartirOrdenes.Image = global::WindowsFormsApp1.Properties.Resources.verde;
                     picture_verde.Visible = true;
                     break;
                 case "instructions":
-                    Ayuda.Image = global::WindowsFormsApp1.Properties.Resources.ayuda;
-                    ayuda_colores.Visible = true;
+                    repartirOrdenes.Image = global::WindowsFormsApp1.Properties.Resources.verde;
+                    picture_verde.Image = global::WindowsFormsApp1.Properties.Resources.verde;
                     pBuild.AppendText("The instructions are, show agents, show services, and begin orders");
                     sSynth.Speak(pBuild);
                     pBuild.ClearContent();
@@ -200,6 +201,7 @@ namespace WindowsFormsApp1
 
         private void logica_labels(string accion)
         {
+            
             resetOpciones();
             Console.WriteLine(accion);
             switch (accion)
@@ -208,20 +210,20 @@ namespace WindowsFormsApp1
                     Console.WriteLine("mostrar agentes");
                     this.titulo_tabla.Visible = true;
                     titulo_tabla.Text = "Agentes";
-                    picture_amarillo.Visible = true;
                     mostrarAgentes.Image = global::WindowsFormsApp1.Properties.Resources.amarillo;
-                    List<Agente> informacion = funcionesXML.read_agenteXML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\agentes.xml", "Agentes");
-                    List<string> nombre_columnas = funcionesXML.get_columns_agentes(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\agentes.xml");
+                    picture_amarillo.Image = global::WindowsFormsApp1.Properties.Resources.amarillo;
+                    List<Agente> informacion = funcionesXML.read_agenteXML(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\agentes.xml", "Agentes");
+                    List<string> nombre_columnas = funcionesXML.get_columns_agentes(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\agentes.xml");
                     tabla_info.DataSource = set_tabla_agentes(nombre_columnas, informacion); 
                     break;
                 case "show orders":
                     Console.WriteLine("mostrar ordenes");
                     this.titulo_tabla.Visible = true;
                     titulo_tabla.Text = "Ordenes";
-                    picture_naranja.Visible = true;
                     mostrarOrdenes.Image = global::WindowsFormsApp1.Properties.Resources.naranja;
-                    List<Orden> informacion_ordenes = funcionesXML.read_clienteXML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\clientes.xml", "Clientes");
-                    List<string> nombre_columnas_ordenes = funcionesXML.get_columns_ordenes(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\clientes.xml");
+                    picture_naranja.Image = global::WindowsFormsApp1.Properties.Resources.naranja;
+                    List<Orden> informacion_ordenes = funcionesXML.read_clienteXML(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\clientes.xml", "Clientes");
+                    List<string> nombre_columnas_ordenes = funcionesXML.get_columns_ordenes(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\clientes.xml");
                     tabla_info.DataSource = set_tabla_ordenes(nombre_columnas_ordenes, informacion_ordenes);
                     break;
                 case "begin orders":
@@ -229,7 +231,8 @@ namespace WindowsFormsApp1
                     this.titulo_tabla.Visible = true;
                     titulo_tabla.Text = "Repartir ordenes";
                     repartirOrdenes.Image = global::WindowsFormsApp1.Properties.Resources.verde;
-                    picture_verde.Visible = true;
+                    picture_verde.Image = global::WindowsFormsApp1.Properties.Resources.verde;
+                    
                     break;
 
                 case "instructions":
@@ -243,18 +246,23 @@ namespace WindowsFormsApp1
 
         private void resetOpciones()
         {
-            mostrarAgentes.Image = null;
-            mostrarOrdenes.Image = null;
-            repartirOrdenes.Image = null;
-
+            colores_iniciales();
             this.titulo_tabla.Visible = false;
-
-            picture_amarillo.Visible = false;
-            picture_naranja.Visible = false;
-            picture_verde.Visible = false;
-
             titulo_tabla.ResetText();
             tabla_info.DataSource = null;
+
+        }
+
+        public void colores_iniciales()
+        {
+            mostrarAgentes.Image = global::WindowsFormsApp1.Properties.Resources.amarillo_pastel;
+            picture_amarillo.Image = global::WindowsFormsApp1.Properties.Resources.amarillo_pastel;
+
+            mostrarOrdenes.Image = global::WindowsFormsApp1.Properties.Resources.naranja_pastel;
+            picture_naranja.Image = global::WindowsFormsApp1.Properties.Resources.naranja_pastel;
+
+            repartirOrdenes.Image = global::WindowsFormsApp1.Properties.Resources.verde_pastel;
+            picture_verde.Image = global::WindowsFormsApp1.Properties.Resources.verde_pastel;
 
         }
         private void boton_temporal_Click(object sender, EventArgs e)
@@ -263,10 +271,6 @@ namespace WindowsFormsApp1
             logica_labels(texto);
         }
 
-        private void mostrarAgentes_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 
 

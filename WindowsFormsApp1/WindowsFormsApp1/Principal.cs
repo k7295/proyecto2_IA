@@ -48,6 +48,8 @@ namespace WindowsFormsApp1
             recEngine.SpeechRecognized += recEngine_SpeechRecognized;
             agent = new Thread(agenteVoz);
             agent.Start();
+            //agent.Abort();
+            
         }
 
         public void agenteVoz()

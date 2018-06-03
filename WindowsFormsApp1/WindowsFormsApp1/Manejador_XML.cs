@@ -50,7 +50,7 @@ namespace WindowsFormsApp1
 
         private void crear_agentesXML()
         {
-            XmlTextWriter writer = new XmlTextWriter(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\agentes.xml", System.Text.Encoding.UTF8);
+            XmlTextWriter writer = new XmlTextWriter(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\agentes.xml", System.Text.Encoding.UTF8);
             writer.WriteStartDocument(true);
             writer.Formatting = Formatting.Indented;
             writer.Indentation = 2;
@@ -68,7 +68,7 @@ namespace WindowsFormsApp1
         private void crear_ClienteXML()
         {
             List<string> nombre_clientes = RandomNombres(nombre_agentes);
-            XmlTextWriter writer = new XmlTextWriter(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\clientes.xml", System.Text.Encoding.UTF8);
+            XmlTextWriter writer = new XmlTextWriter(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\clientes.xml", System.Text.Encoding.UTF8);
             writer.WriteStartDocument(true);
             writer.Formatting = Formatting.Indented;
             writer.Indentation = 2;

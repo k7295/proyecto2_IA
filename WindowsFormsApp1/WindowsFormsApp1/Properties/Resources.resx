@@ -118,10 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\naranja.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barra.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rojo.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\azul.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="audio_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\amarillo.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ayuda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ayuda.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="audio_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagenes\audio_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rojo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -130,31 +145,25 @@
   <data name="audio_icon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\audio_icon.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="audio_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\audio_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="audio_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\audio_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\naranja.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\amarillo.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="barra1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barra1.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\verde.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="audio_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imagenes\audio_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="audio_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ayuda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ayuda.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="amarillo-pastel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\amarillo-pastel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="barra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\barra.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="naranja_pastel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\naranja_pastel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rojo.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="barra1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\barra1.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="verde_pastel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\verde_pastel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
