@@ -54,6 +54,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+<<<<<<< HEAD
             this.label1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(218, 94);
             this.label1.Name = "label1";
@@ -61,6 +62,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Service Distribution System";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+=======
+            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(245, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(302, 32);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Orders Distribution System";
+>>>>>>> lectura_XML
             // 
             // label2
             // 
@@ -133,6 +142,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Titulo_GE);
             this.Controls.Add(this.picture_rojo);
+            this.MaximizeBox = false;
             this.Name = "Principal";
             this.Text = "General Electric";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

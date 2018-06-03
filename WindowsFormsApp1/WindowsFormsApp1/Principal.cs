@@ -11,14 +11,20 @@ using System.Windows.Forms;
 using System.Speech.Recognition;
 using System.Speech.Synthesis;
 using System.Globalization;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> lectura_XML
 
 namespace WindowsFormsApp1
 {
     public partial class Principal : Form
     {
+<<<<<<< HEAD
 
+=======
+>>>>>>> lectura_XML
         System.Windows.Forms.Timer timRun = new System.Windows.Forms.Timer();
         SpeechRecognitionEngine recEngine = new SpeechRecognitionEngine();
         SpeechSynthesizer sSynth = new SpeechSynthesizer();
@@ -32,9 +38,14 @@ namespace WindowsFormsApp1
             InitializeComponent();
             this.CenterToScreen();
 
+<<<<<<< HEAD
 
             Choices commands = new Choices();
             commands.Add(new string[] { "start","hello", "hi" });
+=======
+            Choices commands = new Choices();
+            commands.Add(new string[] { "start", "hello", "hi" });
+>>>>>>> lectura_XML
             gBuilder = new GrammarBuilder();
             gBuilder.Append(commands);
 
@@ -48,11 +59,18 @@ namespace WindowsFormsApp1
             pBuild.ClearContent();
 
             recEngine.SetInputToDefaultAudioDevice();
+<<<<<<< HEAD
           
             recEngine.SpeechRecognized += recEngine_SpeechRecognized;
             agent = new Thread(agenteVoz);
             agent.Start();
 
+=======
+
+            recEngine.SpeechRecognized += recEngine_SpeechRecognized;
+            agent = new Thread(agenteVoz);
+            agent.Start();
+>>>>>>> lectura_XML
         }
 
         public void agenteVoz()
@@ -76,6 +94,43 @@ namespace WindowsFormsApp1
             }
             recEngine.RecognizeAsyncStop();
             agenteVoz();
+<<<<<<< HEAD
+=======
+        }
+
+        public void recEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs er)
+        {
+
+            switch (er.Result.Text)
+            {
+                case "start":
+
+                    picture_rojo.Visible = true;
+                    // ponerle delay :c 
+                    agent.Abort();
+                    Funciones form_funciones = new Funciones(); // se llama el form funciones (hay que cambiarle de nombre)
+                    form_funciones.Visible = true;
+
+                    this.Visible = false;
+
+                    break;
+                case "hello":
+                    pBuild.AppendText("Hello");
+                    sSynth.Speak(pBuild);
+                    pBuild.ClearContent();
+                    break;
+                case "hi":
+                    pBuild.AppendText("hi");
+                    sSynth.Speak(pBuild);
+                    pBuild.ClearContent();
+                    break;
+
+
+            }
+
+
+
+>>>>>>> lectura_XML
         }
 
         public void recEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs er)

@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Clientes>
+  <Cliente>
+    <ID>0</ID>
+    <Nombre>Kadeem Odonnell</Nombre>
+    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>1</ID>
+    <Nombre>Cedric Cooke</Nombre>
+    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>2</ID>
+    <Nombre>Carter Reeves</Nombre>
+    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>3</ID>
+    <Nombre>Cole Merrill</Nombre>
+    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>4</ID>
+    <Nombre>Fulano Mengano</Nombre>
+    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>5</ID>
+    <Nombre>Tobias Wiggins</Nombre>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>6</ID>
+    <Nombre>Coby Miranda</Nombre>
+    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>7</ID>
+    <Nombre>Quinn Sloan</Nombre>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>8</ID>
+    <Nombre>Clark Salinas</Nombre>
+    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>9</ID>
+    <Nombre>Andrew Talley</Nombre>
+    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>10</ID>
+    <Nombre>Byron Roman</Nombre>
+    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>11</ID>
+    <Nombre>Kaseem Weber</Nombre>
+    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>12</ID>
+    <Nombre>Fulton Carter</Nombre>
+    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>13</ID>
+    <Nombre>Elmo Mcclain</Nombre>
+    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>14</ID>
+    <Nombre>Thor Bean</Nombre>
+    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>15</ID>
+    <Nombre>Lars Small</Nombre>
+    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>16</ID>
+    <Nombre>Craig Craft</Nombre>
+    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>17</ID>
+    <Nombre>Aladdin Valentine</Nombre>
+    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>18</ID>
+    <Nombre>Kibo Zamora</Nombre>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>19</ID>
+    <Nombre>Emerson Payne</Nombre>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>20</ID>
+    <Nombre>Ignatius Stewart</Nombre>
+    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>21</ID>
+    <Nombre>Len Barr</Nombre>
+    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>22</ID>
+    <Nombre>Baxter Schmidt</Nombre>
+    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>23</ID>
+    <Nombre>Odysseus Howe</Nombre>
+    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>24</ID>
+    <Nombre>Hyatt Foreman</Nombre>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>25</ID>
+    <Nombre>Hop Nixon</Nombre>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>26</ID>
+    <Nombre>Xanthus Garner</Nombre>
+    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>27</ID>
+    <Nombre>Boris Hartman</Nombre>
+    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>28</ID>
+    <Nombre>Xanthus Ochoa</Nombre>
+    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>29</ID>
+    <Nombre>Caldwell Soto</Nombre>
+    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>30</ID>
+    <Nombre>Craig Bryan</Nombre>
+    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>31</ID>
+    <Nombre>Orson Justice</Nombre>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>32</ID>
+    <Nombre>Preston Wallace</Nombre>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>33</ID>
+    <Nombre>Kato Gardner</Nombre>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>34</ID>
+    <Nombre>Rogan Fleming</Nombre>
+    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>35</ID>
+    <Nombre>Brett Forbes</Nombre>
+    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>36</ID>
+    <Nombre>Tyrone Bradshaw</Nombre>
+    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>37</ID>
+    <Nombre>Valentine Munoz</Nombre>
+    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>38</ID>
+    <Nombre>Merritt Blake</Nombre>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>39</ID>
+    <Nombre>Prescott Guerra</Nombre>
+    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>40</ID>
+    <Nombre>Geoffrey Lawson</Nombre>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>41</ID>
+    <Nombre>Jesse Lancaster</Nombre>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>42</ID>
+    <Nombre>Otto Simmons</Nombre>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>43</ID>
+    <Nombre>Nash White</Nombre>
+    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>44</ID>
+    <Nombre>Aquila Tanner</Nombre>
+    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>45</ID>
+    <Nombre>Shad Joyce</Nombre>
+    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>46</ID>
+    <Nombre>Elmo Buck</Nombre>
+    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>47</ID>
+    <Nombre>Upton Hardy</Nombre>
+    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>48</ID>
+    <Nombre>Quinlan Lott</Nombre>
+    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
+  </Cliente>
+  <Cliente>
+    <ID>49</ID>
+    <Nombre>Julian Roman</Nombre>
+    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
+  </Cliente>
+</Clientes>
