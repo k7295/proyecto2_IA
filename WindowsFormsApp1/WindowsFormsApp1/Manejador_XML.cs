@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml;
+using WindowsFormsApp1.Geneticos;
 
 namespace WindowsFormsApp1
 {
    
     public class Manejador_XML
     {
-        static string direccion= @"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1";
+        // static string direccion = @"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1";
+        static string direccion = @"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1";
 
         List<string> servicios = new List<string>(new string[] { "ICE", "ICG", "ILA", "RCE", "RCG", "RLA" }) ;
         List<string> dias_laborales = new List<string>(new string[] { "Lunes","Martes","Miercoles","Jueves","Viernes" });
@@ -61,7 +63,7 @@ namespace WindowsFormsApp1
             writer.Formatting = Formatting.Indented;
             writer.Indentation = 2;
             writer.WriteStartElement("Agentes");
-            for (int i = 0; i < nombre_agentes.Count; i++)
+            for (int i = 0; i < 30; i++)
             {
                 createNodeAgente(i.ToString(), nombre_agentes[i], servicios_x_agentes(), writer);
             }
@@ -73,7 +75,7 @@ namespace WindowsFormsApp1
 
         private void crear_ClienteXML()
         {
-            List<string> nombre_clientes = RandomNombres(nombre_agentes);
+            //List<string> nombre_clientes = RandomNombres(nombre_agentes);
             //XmlTextWriter writer = new XmlTextWriter(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\clientes.xml", System.Text.Encoding.UTF8);
             XmlTextWriter writer = new XmlTextWriter(direccion+@"\clientes.xml", System.Text.Encoding.UTF8);
             writer.WriteStartDocument(true);
@@ -81,12 +83,12 @@ namespace WindowsFormsApp1
             writer.Indentation = 2;
             writer.WriteStartElement("Clientes");
             
-            for (int i = 0; i < nombre_clientes.Count; i++)
+            for (int i = 0; i < nombre_agentes.Count; i++)
             {
                 int index1 = rnd.Next(0, 5);
                 int dias = rnd.Next(0, 4);
                 int hora = rnd.Next(0, 15);
-                createNodeCliente(i.ToString(), nombre_clientes[i], servicios.ElementAt(index1), dias_laborales.ElementAt(dias), horas_laborales.ElementAt(hora),writer);
+                createNodeCliente(i.ToString(), nombre_agentes[i], servicios.ElementAt(index1), dias_laborales.ElementAt(dias), horas_laborales.ElementAt(hora),writer);
             }
 
             writer.WriteEndElement();
@@ -165,7 +167,7 @@ namespace WindowsFormsApp1
 
                         if (nodes.Item(k).Name == "ID")
                         {
-                            agente.ID1 = nodes.Item(k).InnerText.Trim();
+                            agente.ID1 = int.Parse(nodes.Item(k).InnerText.Trim());
                         }
                         if (nodes.Item(k).Name == "Nombre")
                         {
@@ -179,7 +181,11 @@ namespace WindowsFormsApp1
                                 servicioxagente.Add(nodes_servicios.Item(l).InnerText.Trim());
 
                             }
-                            agente.Servicios = servicioxagente;
+
+                            agente.Cod_Servicios = servicioxagente;
+                            agente.Servicios_Disp = agente.obtener_servicios_bool(servicioxagente).ToArray();
+                            
+                            
                         }
 
                     }
@@ -193,12 +199,12 @@ namespace WindowsFormsApp1
             return lista_agentes;
         }
 
-        public List<Orden> read_clienteXML(string archivo, string TagName)
+        public List<Pedido> read_clienteXML(string archivo, string TagName)
         {
             XmlDocument doc = new XmlDocument();
             doc.Load(archivo);
             XmlNodeList xmlnode = doc.GetElementsByTagName(TagName);
-            List<Orden> lista_ordenes = new List<Orden>();
+            List<Pedido> lista_ordenes = new List<Pedido>();
 
             for (int i = 0; i <= xmlnode.Count - 1; i++)
             {
@@ -208,31 +214,31 @@ namespace WindowsFormsApp1
                 {
                     XmlNodeList nodes = nodes_ordenes[j].ChildNodes;
 
-                    Orden orden = new Orden();
+                    Pedido orden = new Pedido();
 
                     for (int k = 0; k <= nodes.Count - 1; k++)
                     {
 
                         if (nodes.Item(k).Name == "ID")
                         {
-                            orden.ID1 = nodes.Item(k).InnerText.Trim();
+                            orden.id = nodes.Item(k).InnerText.Trim();
                         }
                         if (nodes.Item(k).Name == "Nombre")
                         {
-                            orden.Nombre = nodes.Item(k).InnerText.Trim();
+                            orden.Nombre_cliente = nodes.Item(k).InnerText.Trim();
                         }
                         if (nodes.Item(k).Name == "Codigo_de_Servicio")
                         {
-                            orden.Servicio = nodes.Item(k).InnerText.Trim();
+                            orden.Codigo_servicio = nodes.Item(k).InnerText.Trim();
                         }
                         if (nodes.Item(k).Name == "Dia")
                         {
-                            orden.Dia = nodes.Item(k).InnerText.Trim();
+                            orden.Dia_cita = nodes.Item(k).InnerText.Trim();
                            
                         }
                         if (nodes.Item(k).Name == "Hora")
                         {
-                            orden.Hora = nodes.Item(k).InnerText.Trim();
+                            orden.Hora_cita = nodes.Item(k).InnerText.Trim();
                         }
 
                     }
@@ -328,7 +334,7 @@ namespace WindowsFormsApp1
                 }
         }
 
-        public void imprimirLista_orden(List<Orden> lista)
+        public void imprimirLista_orden(List<Pedido> lista)
         {
             for (int j = 0; j < lista.Count; j++)
             {
@@ -358,15 +364,65 @@ namespace WindowsFormsApp1
         }
         static void Main()
         {
+            
             Manejador_XML p = new Manejador_XML();
             p.crear_agentesXML();
             p.crear_ClienteXML();
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Principal());
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Principal());
 
-            //p.servicios_x_agentes();
-            //  p.read_clienteXML(direccion+@"\clientes.xml", "Clientes");
+            //p.servicios_x_agentes
+            //Pedido p1 = new Pedido(00, "Jorge", "RCE", "9:30", "Lunes");
+            //Pedido p2 = new Pedido(01, "Mario", "ICE", "15:30", "Martes");
+            //Pedido p3 = new Pedido(03, "Carlos", "ILA", "19:30", "Miercoles");
+            //Pedido p4 = new Pedido(04, "Fausto", "RLA", "5:30", "Jueves");
+            //Pedido p5 = new Pedido(05, "Marcos", "ICG", "00:30", "Viernes");
+            //Pedido p6 = new Pedido(06, "Jorge", "RCE", "9:30", "Lunes");
+            //Pedido p7 = new Pedido(07, "Mario", "ICE", "15:30", "Martes");
+            //Pedido p8 = new Pedido(08, "Carlos", "ILA", "19:30", "Miercoles");
+            //Pedido p9 = new Pedido(09, "Fausto", "RLA", "5:30", "Jueves");
+            //Pedido p10 = new Pedido(10, "Marcos", "ICG", "00:30", "Viernes");
+            //Pedido p11 = new Pedido(11, "Jorge", "RCE", "9:30", "Lunes");
+            //Pedido p12 = new Pedido(12, "Mario", "ICE", "15:30", "Martes");
+            //Pedido p13 = new Pedido(13, "Carlos", "ILA", "19:30", "Miercoles");
+            //Pedido p14 = new Pedido(14, "Fausto", "RLA", "5:30", "Jueves");
+            //Pedido p15 = new Pedido(15, "Marcos", "ICG", "00:30", "Viernes");
+
+            //Pedido[] lista_p = { p1, p2, p3, p4, p5 };
+
+            //bool[] data1 = { false, false, false, true, true, true };
+            //bool[] data2 = { true, true, true, false, false, false };
+            //bool[] data3 = { true, false, true, false, true, false };
+            //bool[] data4 = { true, true, true, true, true, true };
+
+            //Agente a1 = new Agente("1", "", data4);
+            //Agente a2 = new Agente("2", "", data4);
+            //Agente a3 = new Agente("3", "", data4);
+            //Agente a4 = new Agente("4", "", data4);
+            //Agente a5 = new Agente("5", "", data4);
+            //Agente a6 = new Agente("6", "", data4);
+            //Agente a7 = new Agente("7", "", data4);
+            //Agente a8 = new Agente("8", "", data4);
+            //Agente a9 = new Agente("9", "", data4);
+            //Agente a10 = new Agente("10", "", data4);
+            //Agente a11 = new Agente("11", "", data4);
+
+            //Agente[] lista_a = { a1, a2, a3 /*,a4,a5,a6,a7,a8,a9,a10,a11*/};
+            int cant = 100;
+            Agente[] lista_a = p.read_agenteXML(direccion + @"\agentes.xml", "Agentes").ToArray();
+            Pedido[] lista_p = p.read_clienteXML(direccion + @"\clientes.xml", "Clientes").ToArray();
+            Genetico g = new Genetico(lista_a, lista_p, cant);
+            Individuo i = g.obtener_Mejor();
+            Console.WriteLine(i.get_Fitness(lista_a, lista_p));
+            List<Agente> lista_agentes = g.deme_agentes();
+            // Console.WriteLine("''''''''''''''''''''''''''''''''''''''''");
+            for (int j = 0; j < lista_agentes.Count; j++)
+            {
+                Console.WriteLine("''''''''''''''''''''''''''''''''''''''''");
+                lista_agentes[j].toString();
+            }
+
             //p.get_columns_ordenes(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\clientes.xml");
             //p.add_servicios_XML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\servicios.xml", "Servicios");
 

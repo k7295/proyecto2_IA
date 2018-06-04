@@ -108,8 +108,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Agente.cs" />
+    <Compile Include="Geneticos\Genetico.cs" />
+    <Compile Include="Geneticos\Individuo.cs" />
+    <Compile Include="Geneticos\Horario.cs" />
     <Compile Include="Manejador_XML.cs" />
-    <Compile Include="Orden.cs" />
+    <Compile Include="Pedido.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +126,7 @@
       <DependentUpon>Funciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios.cs" />
     <EmbeddedResource Include="Funciones.resx">
       <DependentUpon>Funciones.cs</DependentUpon>
     </EmbeddedResource>

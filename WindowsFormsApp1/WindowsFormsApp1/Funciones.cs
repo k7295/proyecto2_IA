@@ -18,9 +18,10 @@ namespace WindowsFormsApp1
     public partial class Funciones : Form
     {
         Manejador_XML funcionesXML = new Manejador_XML();
-
-        //List<string> _names = new List<string>();
-        System.Windows.Forms.Timer timRun = new System.Windows.Forms.Timer();
+        // static string direccion = @"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1";
+        static string direccion = @"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1";
+         //List<string> _names = new List<string>();
+         System.Windows.Forms.Timer timRun = new System.Windows.Forms.Timer();
         SpeechRecognitionEngine recEngine = new SpeechRecognitionEngine();
         SpeechSynthesizer sSynth = new SpeechSynthesizer();
 
@@ -51,12 +52,11 @@ namespace WindowsFormsApp1
             recEngine.SpeechRecognized += recEngine_SpeechRecognized;
             agent = new Thread(agenteVoz);
             agent.Start();
-            //agent.Abort();
-            //List<string> nombre_columnas = funcionesXML.get_columns(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\servicios.xml", "Servicios");
-            //List<List<string>> informacion = funcionesXML.readXML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\servicios.xml", "Servicios");
-            //List<Agente> informacion = p.read_agenteXML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\agentes.xml", "Agentes");
-            //List<string> nombre_columnas = p.get_columns_agentes(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\agentes.xml");
-            //dataGridView1.DataSource = set_tabla(nombre_columnas, informacion);
+            agent.Abort();
+           
+           // List<Agente> informacion = p.read_agenteXML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\agentes.xml", "Agentes");
+           // List<string> nombre_columnas = p.get_columns_agentes(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\agentes.xml");
+           ///dataGridView1.DataSource = set_tabla(nombre_columnas, informacion);
 
         }
 
@@ -96,8 +96,8 @@ namespace WindowsFormsApp1
                     picture_amarillo.Image = global::WindowsFormsApp1.Properties.Resources.amarillo;
                     //List<Agente> informacion = funcionesXML.read_agenteXML(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\agentes.xml", "Agentes");
                     //List<string> nombre_columnas = funcionesXML.get_columns_agentes(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\agentes.xml");
-                    List<Agente> informacion = funcionesXML.read_agenteXML(@"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1\agentes.xml", "Agentes");
-                    List<string> nombre_columnas = funcionesXML.get_columns_agentes(@"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1\agentes.xml");
+                    List<Agente> informacion = funcionesXML.read_agenteXML(direccion+@"\agentes.xml", "Agentes");
+                    List<string> nombre_columnas = funcionesXML.get_columns_agentes(direccion + @"\agentes.xml");
                     tabla_info.DataSource = set_tabla_agentes(nombre_columnas, informacion);
 
 
@@ -108,8 +108,8 @@ namespace WindowsFormsApp1
                     titulo_tabla.Text = "Orders";
                     mostrarOrdenes.Image = global::WindowsFormsApp1.Properties.Resources.naranja;
                     picture_naranja.Image = global::WindowsFormsApp1.Properties.Resources.naranja;
-                    List<Orden> informacion_ordenes = funcionesXML.read_clienteXML(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\clientes.xml", "Clientes");
-                    List<string> nombre_columnas_ordenes = funcionesXML.get_columns_ordenes(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\clientes.xml");
+                    List<Pedido> informacion_ordenes = funcionesXML.read_clienteXML(direccion + @"\clientes.xml", "Clientes");
+                    List<string> nombre_columnas_ordenes = funcionesXML.get_columns_ordenes(direccion + @"\clientes.xml");
                     tabla_info.DataSource = set_tabla_ordenes(nombre_columnas_ordenes, informacion_ordenes);
                     break;
                 case "begin orders":
@@ -161,16 +161,16 @@ namespace WindowsFormsApp1
 
                     d.Rows[j][0] = agente.ID1;
                     d.Rows[j][1] = agente.Nombre;
-                    d.Rows[j][2] = agente.Servicios[0];
-                    d.Rows[j][3] = agente.Servicios[1];
-                    d.Rows[j][4] = agente.Servicios[2];
+                    d.Rows[j][2] = agente.Cod_Servicios[0];
+                    d.Rows[j][3] = agente.Cod_Servicios[1];
+                    d.Rows[j][4] = agente.Cod_Servicios[2];
 
             }
             
             return d;
         }
 
-        public DataTable set_tabla_ordenes(List<string> nombreColumnas, List<Orden> informacion)
+        public DataTable set_tabla_ordenes(List<string> nombreColumnas, List<Pedido> informacion)
         {
             // Create the output table.
             DataTable d = new DataTable();
@@ -186,7 +186,7 @@ namespace WindowsFormsApp1
             for (int j = 0; j < informacion.Count; j++)
             {
 
-                Orden orden = informacion[j];
+                Pedido orden = informacion[j];
                 Console.WriteLine("---------------");
 
                 // Keep adding rows until we have enough.
@@ -195,11 +195,11 @@ namespace WindowsFormsApp1
                     d.Rows.Add();
                 }
 
-                d.Rows[j][0] = orden.ID1;
-                d.Rows[j][1] = orden.Nombre;
-                d.Rows[j][2] = orden.Servicio;
-                d.Rows[j][3] = orden.Dia;
-                d.Rows[j][4] = orden.Hora;
+                d.Rows[j][0] = orden.id;
+                d.Rows[j][1] = orden.Nombre_cliente;
+                d.Rows[j][2] = orden.Codigo_servicio;
+                d.Rows[j][3] = orden.Dia_cita;
+                d.Rows[j][4] = orden.Hora_cita;
             }
 
             return d;
@@ -220,8 +220,8 @@ namespace WindowsFormsApp1
                     picture_amarillo.Image = global::WindowsFormsApp1.Properties.Resources.amarillo;
                     //List<Agente> informacion = funcionesXML.read_agenteXML(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\agentes.xml", "Agentes");
                     //List<string> nombre_columnas = funcionesXML.get_columns_agentes(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\agentes.xml");
-                    List<Agente> informacion = funcionesXML.read_agenteXML(@"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1\agentes.xml", "Agentes");
-                    List<string> nombre_columnas = funcionesXML.get_columns_agentes(@"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1\agentes.xml");
+                    List<Agente> informacion = funcionesXML.read_agenteXML(direccion+@"\agentes.xml", "Agentes");
+                    List<string> nombre_columnas = funcionesXML.get_columns_agentes(direccion + @"\agentes.xml");
                     
                     tabla_info.DataSource = set_tabla_agentes(nombre_columnas, informacion);
                    
@@ -235,8 +235,8 @@ namespace WindowsFormsApp1
                     picture_naranja.Image = global::WindowsFormsApp1.Properties.Resources.naranja;
                     //List<Orden> informacion_ordenes = funcionesXML.read_clienteXML(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\clientes.xml", "Clientes");
                     //List<string> nombre_columnas_ordenes = funcionesXML.get_columns_ordenes(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\clientes.xml");
-                    List<Orden> informacion_ordenes = funcionesXML.read_clienteXML(@"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1\clientes.xml", "Clientes");
-                    List<string> nombre_columnas_ordenes = funcionesXML.get_columns_ordenes(@"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1\clientes.xml");
+                    List<Pedido> informacion_ordenes = funcionesXML.read_clienteXML(direccion + @"\clientes.xml", "Clientes");
+                    List<string> nombre_columnas_ordenes = funcionesXML.get_columns_ordenes(direccion + @"\clientes.xml");
                     tabla_info.DataSource = set_tabla_ordenes(nombre_columnas_ordenes, informacion_ordenes);
                     break;
                 case "begin orders":
