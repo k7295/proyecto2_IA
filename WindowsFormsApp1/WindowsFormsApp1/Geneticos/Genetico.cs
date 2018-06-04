@@ -34,28 +34,28 @@ namespace WindowsFormsApp1.Geneticos
             return patron;
         }
 
+       
         private Individuo crear_Individuo_Aleatorio()
         {
             int[] suma_horas = this.crear_Array(this.lista_agentes.Length);
             int[] data = new int[this.lista_pedidos.Length];
-
-
-
-
-            for (int i = 0; i < data.Length; i++)
+            ArrayList lista_tipos_servicios = this.obtener_Listas_Agentes_Tipos();
+            for (int i = 0; i < data.Length; i++)   // se debe optimizar ese for
             {
                 Pedido p = lista_pedidos[i];
-                ArrayList lista_tipos_servicios = this.obtener_Listas_Agentes_Tipos();
+                //ArrayList lista_tipos_servicios1 = lista_tipos_servicios;
                 ArrayList lista_actuales = this.obtener_Lista_Unico_Servicio(lista_tipos_servicios, p.Codigo_servicio);
 
                 Horario h = new Horario(this.lista_agentes.Length);
 
                 bool listo = false;
+                ArrayList lista_actuales_temp = lista_actuales;
                 while (!listo)
                 {
                     if (lista_actuales.Count != 0)
                     {
-                        int indice_agente_random = (int)lista_actuales[this.rand.Next(lista_actuales.Count)];
+                        
+                        int indice_agente_random = (int)lista_actuales[this.rand.Next(lista_actuales_temp.Count)];
                         if (suma_horas[indice_agente_random] + p.get_Tiempo() <= 40)
                         {
                             if (h.horasLibres(indice_agente_random, p))
@@ -67,13 +67,15 @@ namespace WindowsFormsApp1.Geneticos
                             }
                             else
                             {
-                                data[i] = -1;
-                                listo = true;
+                                lista_actuales_temp.RemoveAt(indice_agente_random);
+                                //lista_actuales_temp = lista_actuales;
+
                             }
                         }
                         else
                         {
-                            lista_actuales.RemoveAt(indice_agente_random);
+                            lista_actuales_temp.RemoveAt(indice_agente_random);
+                            //lista_actuales_temp = lista_actuales;
                         }
                     }
                     else

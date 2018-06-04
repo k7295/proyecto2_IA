@@ -366,8 +366,8 @@ namespace WindowsFormsApp1
         {
             
             Manejador_XML p = new Manejador_XML();
-            //p.crear_agentesXML();
-            //p.crear_ClienteXML();
+            p.crear_agentesXML();
+            p.crear_ClienteXML();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Principal());

@@ -33,6 +33,8 @@ namespace WindowsFormsApp1
         ///// Contains column data arrays.
         ///// </summary>
         //List<double[]> _dataArray = new List<double[]>();
+        
+         
 
         public Funciones()
         {
@@ -54,10 +56,13 @@ namespace WindowsFormsApp1
             agent = new Thread(agenteVoz);
             agent.Start();
             agent.Abort();
+
+
+            // List<Agente> informacion = p.read_agenteXML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\agentes.xml", "Agentes");
+            // List<string> nombre_columnas = p.get_columns_agentes(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\agentes.xml");
+            ///dataGridView1.DataSource = set_tabla(nombre_columnas, informacion);
+
            
-           // List<Agente> informacion = p.read_agenteXML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\agentes.xml", "Agentes");
-           // List<string> nombre_columnas = p.get_columns_agentes(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\agentes.xml");
-           ///dataGridView1.DataSource = set_tabla(nombre_columnas, informacion);
 
         }
 
@@ -100,8 +105,6 @@ namespace WindowsFormsApp1
                     List<Agente> informacion = funcionesXML.read_agenteXML(direccion+@"\agentes.xml", "Agentes");
                     List<string> nombre_columnas = funcionesXML.get_columns_agentes(direccion + @"\agentes.xml");
                     tabla_info.DataSource = set_tabla_agentes(nombre_columnas, informacion);
-
-
                     break;
                 case "show orders":
                     Console.WriteLine("mostrar ordenes");
@@ -116,9 +119,18 @@ namespace WindowsFormsApp1
                 case "begin orders":
                     Console.WriteLine("repartir ordenes");
                     this.titulo_tabla.Visible = true;
-                    titulo_tabla.Text = "Begin orders";
+                    titulo_tabla.Text = "Repartir ordenes";
                     repartirOrdenes.Image = global::WindowsFormsApp1.Properties.Resources.verde;
-                    picture_verde.Visible = true;
+                    picture_verde.Image = global::WindowsFormsApp1.Properties.Resources.verde;
+                    int cant = 50;
+                    Agente[] lista_a = funcionesXML.read_agenteXML(direccion + @"\agentes.xml", "Agentes").ToArray();
+                    Pedido[] lista_p = funcionesXML.read_clienteXML(direccion + @"\clientes.xml", "Clientes").ToArray();
+                    Genetico g = new Genetico(lista_a, lista_p, cant);
+                    Individuo i = g.obtener_Mejor();
+                    Console.WriteLine(i.get_Fitness(lista_a, lista_p));
+                    List<Agente> lista_agentes = g.deme_agentes();
+                    List<string> nombre_columnas_repartir = new List<string>(new string[] { "ID", "Nombre", "Ordenes", "Comision", "Hora" });
+                    tabla_info.DataSource = set_tabla_repatir(nombre_columnas_repartir, lista_agentes);
                     break;
                 case "instructions":
                     repartirOrdenes.Image = global::WindowsFormsApp1.Properties.Resources.verde;
@@ -293,11 +305,6 @@ namespace WindowsFormsApp1
                     Console.WriteLine(i.get_Fitness(lista_a, lista_p));
                     List<Agente> lista_agentes = g.deme_agentes();
                     List<string> nombre_columnas_repartir = new List<string>(new string[] { "ID","Nombre","Ordenes","Comision","Hora"});
-                    for (int j = 0; j < lista_agentes.Count; j++)
-                    {
-                        Console.WriteLine("''''''''''''''''''''''''''''''''''''''''");
-                        lista_agentes[j].toString();
-                    }
                     tabla_info.DataSource = set_tabla_repatir(nombre_columnas_repartir,lista_agentes);
                     break;
 
