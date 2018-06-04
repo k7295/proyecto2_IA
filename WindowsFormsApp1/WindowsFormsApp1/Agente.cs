@@ -133,12 +133,15 @@ namespace WindowsFormsApp1
             }
         }
 
-        public void imprimirLista(List<Pedido> lista)
+        public string getPedidos(List<Pedido> lista)
         {
+            string pedidos = "";
             for (int i = 0; i < lista.Count; i++)
             {
                 Console.WriteLine("/" + lista[i].Codigo_servicio);
+                pedidos += lista[i].Codigo_servicio + ",";
             }
+            return pedidos;
         }
 
 
@@ -224,7 +227,7 @@ namespace WindowsFormsApp1
         public void toString()
         {
             Console.WriteLine("id:" + this.ID1 + " nombre: " + this.Nombre + " comision: " + comision_total() +" horas totales: " + horas_total()+" servicios: ");
-            imprimirLista(this.ordenes);
+            //imprimirLista(this.ordenes);
         }
 
     }

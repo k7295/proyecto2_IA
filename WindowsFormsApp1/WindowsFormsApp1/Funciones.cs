@@ -11,6 +11,7 @@ using System.Threading;
 using System.Speech.Recognition;
 using System.Speech.Synthesis;
 using System.Globalization;
+using WindowsFormsApp1.Geneticos;
 
 namespace WindowsFormsApp1
 {
@@ -170,6 +171,44 @@ namespace WindowsFormsApp1
             return d;
         }
 
+        public DataTable set_tabla_repatir(List<string> nombreColumnas, List<Agente> informacion)
+        {
+            // Create the output table.
+            DataTable d = new DataTable();
+
+            // Loop through all process names.
+            for (int i = 0; i < nombreColumnas.Count; i++)
+            {
+                // Add the program name to our columns.
+                d.Columns.Add(nombreColumnas[i]);
+
+            }
+            
+
+            for (int j = 0; j < informacion.Count; j++)
+            {
+
+                Agente agente = informacion[j];
+                Console.WriteLine("---------------");
+
+                // Keep adding rows until we have enough.
+                while (d.Rows.Count < informacion.Count)
+                {
+                    d.Rows.Add();
+                }
+
+                d.Rows[j][0] = agente.ID1;
+                d.Rows[j][1] = agente.Nombre;
+                d.Rows[j][2] = agente.getPedidos(agente.Ordenes);
+                d.Rows[j][3] = agente.comision_total();
+                d.Rows[j][4] = agente.horas_total();
+
+
+            }
+
+            return d;
+        }
+
         public DataTable set_tabla_ordenes(List<string> nombreColumnas, List<Pedido> informacion)
         {
             // Create the output table.
@@ -239,13 +278,27 @@ namespace WindowsFormsApp1
                     List<string> nombre_columnas_ordenes = funcionesXML.get_columns_ordenes(direccion + @"\clientes.xml");
                     tabla_info.DataSource = set_tabla_ordenes(nombre_columnas_ordenes, informacion_ordenes);
                     break;
+
                 case "begin orders":
                     Console.WriteLine("repartir ordenes");
                     this.titulo_tabla.Visible = true;
                     titulo_tabla.Text = "Repartir ordenes";
                     repartirOrdenes.Image = global::WindowsFormsApp1.Properties.Resources.verde;
                     picture_verde.Image = global::WindowsFormsApp1.Properties.Resources.verde;
-                    
+                    int cant = 100;
+                    Agente[] lista_a = funcionesXML.read_agenteXML(direccion + @"\agentes.xml", "Agentes").ToArray();
+                    Pedido[] lista_p = funcionesXML.read_clienteXML(direccion + @"\clientes.xml", "Clientes").ToArray();
+                    Genetico g = new Genetico(lista_a, lista_p, cant);
+                    Individuo i = g.obtener_Mejor();
+                    Console.WriteLine(i.get_Fitness(lista_a, lista_p));
+                    List<Agente> lista_agentes = g.deme_agentes();
+                    List<string> nombre_columnas_repartir = new List<string>(new string[] { "ID","Nombre","Ordenes","Comision","Hora"});
+                    for (int j = 0; j < lista_agentes.Count; j++)
+                    {
+                        Console.WriteLine("''''''''''''''''''''''''''''''''''''''''");
+                        lista_agentes[j].toString();
+                    }
+                    tabla_info.DataSource = set_tabla_repatir(nombre_columnas_repartir,lista_agentes);
                     break;
 
                 case "instructions":

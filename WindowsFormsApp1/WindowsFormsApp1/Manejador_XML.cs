@@ -366,11 +366,11 @@ namespace WindowsFormsApp1
         {
             
             Manejador_XML p = new Manejador_XML();
-            p.crear_agentesXML();
-            p.crear_ClienteXML();
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Principal());
+            //p.crear_agentesXML();
+            //p.crear_ClienteXML();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Principal());
 
             //p.servicios_x_agentes
             //Pedido p1 = new Pedido(00, "Jorge", "RCE", "9:30", "Lunes");
@@ -409,19 +409,19 @@ namespace WindowsFormsApp1
             //Agente a11 = new Agente("11", "", data4);
 
             //Agente[] lista_a = { a1, a2, a3 /*,a4,a5,a6,a7,a8,a9,a10,a11*/};
-            int cant = 100;
-            Agente[] lista_a = p.read_agenteXML(direccion + @"\agentes.xml", "Agentes").ToArray();
-            Pedido[] lista_p = p.read_clienteXML(direccion + @"\clientes.xml", "Clientes").ToArray();
-            Genetico g = new Genetico(lista_a, lista_p, cant);
-            Individuo i = g.obtener_Mejor();
-            Console.WriteLine(i.get_Fitness(lista_a, lista_p));
-            List<Agente> lista_agentes = g.deme_agentes();
-            // Console.WriteLine("''''''''''''''''''''''''''''''''''''''''");
-            for (int j = 0; j < lista_agentes.Count; j++)
-            {
-                Console.WriteLine("''''''''''''''''''''''''''''''''''''''''");
-                lista_agentes[j].toString();
-            }
+            //int cant = 100;
+            //Agente[] lista_a = p.read_agenteXML(direccion + @"\agentes.xml", "Agentes").ToArray();
+            //Pedido[] lista_p = p.read_clienteXML(direccion + @"\clientes.xml", "Clientes").ToArray();
+            //Genetico g = new Genetico(lista_a, lista_p, cant);
+            //Individuo i = g.obtener_Mejor();
+            //Console.WriteLine(i.get_Fitness(lista_a, lista_p));
+            //List<Agente> lista_agentes = g.deme_agentes();
+            //// Console.WriteLine("''''''''''''''''''''''''''''''''''''''''");
+            //for (int j = 0; j < lista_agentes.Count; j++)
+            //{
+            //    Console.WriteLine("''''''''''''''''''''''''''''''''''''''''");
+            //    lista_agentes[j].toString();
+            //}
 
             //p.get_columns_ordenes(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\clientes.xml");
             //p.add_servicios_XML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\servicios.xml", "Servicios");
