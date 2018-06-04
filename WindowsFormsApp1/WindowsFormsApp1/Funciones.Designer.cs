@@ -94,7 +94,6 @@ namespace WindowsFormsApp1
             this.mostrarAgentes.Size = new System.Drawing.Size(141, 33);
             this.mostrarAgentes.TabIndex = 1;
             this.mostrarAgentes.Text = "Show Agents";
-          
             // 
             // boton_temporal
             // 
@@ -127,6 +126,7 @@ namespace WindowsFormsApp1
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+
             this.tabla_info.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tabla_info.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -137,6 +137,7 @@ namespace WindowsFormsApp1
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tabla_info.DefaultCellStyle = dataGridViewCellStyle2;
+            this.tabla_info.GridColor = System.Drawing.SystemColors.GrayText;
             this.tabla_info.Location = new System.Drawing.Point(19, 101);
             this.tabla_info.Margin = new System.Windows.Forms.Padding(10);
             this.tabla_info.Name = "tabla_info";
@@ -145,6 +146,8 @@ namespace WindowsFormsApp1
             this.tabla_info.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.tabla_info.Size = new System.Drawing.Size(614, 444);
             this.tabla_info.TabIndex = 11;
+
+            
             // 
             // Ayuda
             // 
@@ -174,7 +177,6 @@ namespace WindowsFormsApp1
             this.picture_amarillo.Size = new System.Drawing.Size(234, 112);
             this.picture_amarillo.TabIndex = 6;
             this.picture_amarillo.TabStop = false;
-           
             // 
             // picture_naranja
             // 
@@ -183,7 +185,6 @@ namespace WindowsFormsApp1
             this.picture_naranja.Size = new System.Drawing.Size(234, 112);
             this.picture_naranja.TabIndex = 7;
             this.picture_naranja.TabStop = false;
-           
             // 
             // picture_verde
             // 
@@ -192,7 +193,6 @@ namespace WindowsFormsApp1
             this.picture_verde.Size = new System.Drawing.Size(234, 112);
             this.picture_verde.TabIndex = 8;
             this.picture_verde.TabStop = false;
-           
             // 
             // ayuda_colores
             // 

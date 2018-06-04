@@ -94,8 +94,10 @@ namespace WindowsFormsApp1
                     titulo_tabla.Text = "Agents";
                     mostrarAgentes.Image = global::WindowsFormsApp1.Properties.Resources.amarillo;
                     picture_amarillo.Image = global::WindowsFormsApp1.Properties.Resources.amarillo;
-                    List<Agente> informacion = funcionesXML.read_agenteXML(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\agentes.xml", "Agentes");
-                    List<string> nombre_columnas = funcionesXML.get_columns_agentes(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\agentes.xml");
+                    //List<Agente> informacion = funcionesXML.read_agenteXML(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\agentes.xml", "Agentes");
+                    //List<string> nombre_columnas = funcionesXML.get_columns_agentes(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\agentes.xml");
+                    List<Agente> informacion = funcionesXML.read_agenteXML(@"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1\agentes.xml", "Agentes");
+                    List<string> nombre_columnas = funcionesXML.get_columns_agentes(@"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1\agentes.xml");
                     tabla_info.DataSource = set_tabla_agentes(nombre_columnas, informacion);
 
 
@@ -142,6 +144,7 @@ namespace WindowsFormsApp1
             {
                 // Add the program name to our columns.
                 d.Columns.Add(nombreColumnas[i]);
+                
             }
 
             for (int j = 0; j < informacion.Count; j++)
@@ -177,6 +180,7 @@ namespace WindowsFormsApp1
             {
                 // Add the program name to our columns.
                 d.Columns.Add(nombreColumnas[i]);
+                
             }
 
             for (int j = 0; j < informacion.Count; j++)
@@ -194,6 +198,8 @@ namespace WindowsFormsApp1
                 d.Rows[j][0] = orden.ID1;
                 d.Rows[j][1] = orden.Nombre;
                 d.Rows[j][2] = orden.Servicio;
+                d.Rows[j][3] = orden.Dia;
+                d.Rows[j][4] = orden.Hora;
             }
 
             return d;
@@ -212,9 +218,14 @@ namespace WindowsFormsApp1
                     titulo_tabla.Text = "Agentes";
                     mostrarAgentes.Image = global::WindowsFormsApp1.Properties.Resources.amarillo;
                     picture_amarillo.Image = global::WindowsFormsApp1.Properties.Resources.amarillo;
-                    List<Agente> informacion = funcionesXML.read_agenteXML(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\agentes.xml", "Agentes");
-                    List<string> nombre_columnas = funcionesXML.get_columns_agentes(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\agentes.xml");
-                    tabla_info.DataSource = set_tabla_agentes(nombre_columnas, informacion); 
+                    //List<Agente> informacion = funcionesXML.read_agenteXML(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\agentes.xml", "Agentes");
+                    //List<string> nombre_columnas = funcionesXML.get_columns_agentes(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\agentes.xml");
+                    List<Agente> informacion = funcionesXML.read_agenteXML(@"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1\agentes.xml", "Agentes");
+                    List<string> nombre_columnas = funcionesXML.get_columns_agentes(@"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1\agentes.xml");
+                    
+                    tabla_info.DataSource = set_tabla_agentes(nombre_columnas, informacion);
+                   
+                    
                     break;
                 case "show orders":
                     Console.WriteLine("mostrar ordenes");
@@ -222,8 +233,10 @@ namespace WindowsFormsApp1
                     titulo_tabla.Text = "Ordenes";
                     mostrarOrdenes.Image = global::WindowsFormsApp1.Properties.Resources.naranja;
                     picture_naranja.Image = global::WindowsFormsApp1.Properties.Resources.naranja;
-                    List<Orden> informacion_ordenes = funcionesXML.read_clienteXML(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\clientes.xml", "Clientes");
-                    List<string> nombre_columnas_ordenes = funcionesXML.get_columns_ordenes(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\clientes.xml");
+                    //List<Orden> informacion_ordenes = funcionesXML.read_clienteXML(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\clientes.xml", "Clientes");
+                    //List<string> nombre_columnas_ordenes = funcionesXML.get_columns_ordenes(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\clientes.xml");
+                    List<Orden> informacion_ordenes = funcionesXML.read_clienteXML(@"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1\clientes.xml", "Clientes");
+                    List<string> nombre_columnas_ordenes = funcionesXML.get_columns_ordenes(@"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1\clientes.xml");
                     tabla_info.DataSource = set_tabla_ordenes(nombre_columnas_ordenes, informacion_ordenes);
                     break;
                 case "begin orders":

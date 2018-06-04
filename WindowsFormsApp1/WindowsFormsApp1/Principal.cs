@@ -118,6 +118,7 @@ namespace WindowsFormsApp1
                     Console.WriteLine("LA PUTA AMA");
                     picture_rojo.Visible = true;
                     // ponerle delay :c 
+                    agent.Abort();
                     Funciones form_funciones = new Funciones(); // se llama el form funciones (hay que cambiarle de nombre)
                     form_funciones.Visible = true;
                     this.Visible = false;

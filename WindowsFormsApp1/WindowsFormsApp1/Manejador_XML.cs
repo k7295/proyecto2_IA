@@ -9,7 +9,12 @@ namespace WindowsFormsApp1
    
     public class Manejador_XML
     {
+        static string direccion= @"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1";
+
         List<string> servicios = new List<string>(new string[] { "ICE", "ICG", "ILA", "RCE", "RCG", "RLA" }) ;
+        List<string> dias_laborales = new List<string>(new string[] { "Lunes","Martes","Miercoles","Jueves","Viernes" });
+        List<string> horas_laborales = new List<string>(new string[] { "7:00", "7:30", "8:00", "8:30", "9:00","9:30","10:00","10:30","11:00","11:30","1:00","1:30",
+                                                            "2:00","2:30","3:00"});
         List<string> nombre_agentes = new List<string>(new string[] { "Fulano Mengano","Colton Ramos","Stuart Mcguire",
                                                        "Hoyt Wilkerson","Nissim Dennis","Dalton Serrano","Daquan Waters",
                                                        "Byron Roman","Caldwell Soto","Rudyard Fitzgerald","Kato Gardner",
@@ -50,7 +55,8 @@ namespace WindowsFormsApp1
 
         private void crear_agentesXML()
         {
-            XmlTextWriter writer = new XmlTextWriter(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\agentes.xml", System.Text.Encoding.UTF8);
+            //XmlTextWriter writer = new XmlTextWriter(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\agentes.xml", System.Text.Encoding.UTF8);
+            XmlTextWriter writer = new XmlTextWriter(direccion+@"\agentes.xml", System.Text.Encoding.UTF8);
             writer.WriteStartDocument(true);
             writer.Formatting = Formatting.Indented;
             writer.Indentation = 2;
@@ -68,7 +74,8 @@ namespace WindowsFormsApp1
         private void crear_ClienteXML()
         {
             List<string> nombre_clientes = RandomNombres(nombre_agentes);
-            XmlTextWriter writer = new XmlTextWriter(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\clientes.xml", System.Text.Encoding.UTF8);
+            //XmlTextWriter writer = new XmlTextWriter(@"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1\clientes.xml", System.Text.Encoding.UTF8);
+            XmlTextWriter writer = new XmlTextWriter(direccion+@"\clientes.xml", System.Text.Encoding.UTF8);
             writer.WriteStartDocument(true);
             writer.Formatting = Formatting.Indented;
             writer.Indentation = 2;
@@ -76,8 +83,10 @@ namespace WindowsFormsApp1
             
             for (int i = 0; i < nombre_clientes.Count; i++)
             {
-                int index = rnd.Next(0, 5);
-                createNodeCliente(i.ToString(), nombre_clientes[i], servicios.ElementAt(index), writer);
+                int index1 = rnd.Next(0, 5);
+                int dias = rnd.Next(0, 4);
+                int hora = rnd.Next(0, 15);
+                createNodeCliente(i.ToString(), nombre_clientes[i], servicios.ElementAt(index1), dias_laborales.ElementAt(dias), horas_laborales.ElementAt(hora),writer);
             }
 
             writer.WriteEndElement();
@@ -106,7 +115,7 @@ namespace WindowsFormsApp1
             writer.WriteEndElement();
         }
 
-        private void createNodeCliente(string pID, string pName, string pServicios, XmlTextWriter writer)
+        private void createNodeCliente(string pID, string pName, string pServicios,string pDia,string pHora, XmlTextWriter writer)
         {
             writer.WriteStartElement("Cliente");
             writer.WriteStartElement("ID");
@@ -117,6 +126,12 @@ namespace WindowsFormsApp1
             writer.WriteEndElement();
             writer.WriteStartElement("Codigo_de_Servicio");
             writer.WriteString(pServicios);
+            writer.WriteEndElement();
+            writer.WriteStartElement("Dia");
+            writer.WriteString(pDia);
+            writer.WriteEndElement();
+            writer.WriteStartElement("Hora");
+            writer.WriteString(pHora);
             writer.WriteEndElement();
             writer.WriteEndElement();
         }
@@ -209,6 +224,15 @@ namespace WindowsFormsApp1
                         if (nodes.Item(k).Name == "Codigo_de_Servicio")
                         {
                             orden.Servicio = nodes.Item(k).InnerText.Trim();
+                        }
+                        if (nodes.Item(k).Name == "Dia")
+                        {
+                            orden.Dia = nodes.Item(k).InnerText.Trim();
+                           
+                        }
+                        if (nodes.Item(k).Name == "Hora")
+                        {
+                            orden.Hora = nodes.Item(k).InnerText.Trim();
                         }
 
                     }
@@ -342,7 +366,7 @@ namespace WindowsFormsApp1
             Application.Run(new Principal());
 
             //p.servicios_x_agentes();
-            //p.read_clienteXML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\clientes.xml", "Clientes");
+            //  p.read_clienteXML(direccion+@"\clientes.xml", "Clientes");
             //p.get_columns_ordenes(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\clientes.xml");
             //p.add_servicios_XML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\servicios.xml", "Servicios");
 
