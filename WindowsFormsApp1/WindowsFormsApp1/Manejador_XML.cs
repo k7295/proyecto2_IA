@@ -10,13 +10,30 @@ namespace WindowsFormsApp1
    
     public class Manejador_XML
     {
-        // static string direccion = @"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1";
-        static string direccion = @"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1";
+         static string direccion = @"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1";
+       // static string direccion = @"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1";
 
         List<string> servicios = new List<string>(new string[] { "ICE", "ICG", "ILA", "RCE", "RCG", "RLA" }) ;
         List<string> dias_laborales = new List<string>(new string[] { "Lunes","Martes","Miercoles","Jueves","Viernes" });
         List<string> horas_laborales = new List<string>(new string[] { "7:00", "7:30", "8:00", "8:30", "9:00","9:30","10:00","10:30","11:00","11:30","1:00","1:30",
                                                             "2:00","2:30","3:00"});
+        //List<string> nombre_agentes = new List<string>(new string[] { "Fulano Mengano","Colton Ramos","Stuart Mcguire",
+        //                                               "Hoyt Wilkerson","Nissim Dennis","Dalton Serrano","Daquan Waters",
+        //                                               "Byron Roman","Caldwell Soto","Rudyard Fitzgerald","Kato Gardner",
+        //                                               "Cody Cantu","Eric Duke","Rogan Fleming","Hop Nixon","Caldwell Brooks",
+        //                                               "Julian Roman","Dustin Mercado","Wylie Mcneil","Elmo Buck","Callum Lambert","Cedric Cooke",
+        //                                               "Kaseem Weber","Armando Waters","Victor Camacho","Gabriel Roach","Graham Wise",
+        //                                               "Ferris Carroll","Edan Alvarez","Caleb Floyd","Hoyt Jefferson","Russell Vega",
+        //                                               "Clark Salinas","Geoffrey Lawson","Ignatius Stewart","Tyrone Bradshaw",
+        //                                               "Quinlan Lott","Odysseus Howe","Kibo Zamora","Preston Wallace","Andrew Talley","Thor Bean",
+        //                                               "Upton Hardy","Xanthus Garner","Lewis Mack","Alfonso Tanner","Francis Hansen","Xanthus Ochoa","Wesley Campos",
+        //                                               "Chester Sparks","Ferris Nunez","Baxter Schmidt","Len Barr","Quinn Sloan","Cedric Brewer","Craig Bryan",
+        //                                               "Aquila Tanner","Cade Nolan","Elmo Mcclain","Carter Reeves","Yasir Wolf","Otto Simmons","Timon Faulkner",
+        //                                               "Craig Craft","Kyle Skinner","Joel Burton","Lars Small","Ulysses Carson","Aladdin Valentine","Donovan Kramer","Silas Scott",
+        //                                               "Jesse Lancaster","Warren Norman","Kadeem Odonnell","Jesse Cross","Denton Coffey","Orson Justice","Fulton Carter","Emerson Payne","Brett Forbes",
+        //                                               "Chaney Stark","Prescott Guerra","Boris Hartman","Nash White",
+        //                                               "Merritt Blake","Hyatt Foreman","Allistair Wells","Coby Miranda","Colorado Lynch","Shad Joyce","Cole Merrill","Neville Case","Valentine Munoz",
+        //                                               "Raphael Valenzuela","Tobias Wiggins","Gabriel Short","Zeph Santiago","Dennis Young","Xavier Morrow"});
         List<string> nombre_agentes = new List<string>(new string[] { "Fulano Mengano","Colton Ramos","Stuart Mcguire",
                                                        "Hoyt Wilkerson","Nissim Dennis","Dalton Serrano","Daquan Waters",
                                                        "Byron Roman","Caldwell Soto","Rudyard Fitzgerald","Kato Gardner",
@@ -26,14 +43,7 @@ namespace WindowsFormsApp1
                                                        "Ferris Carroll","Edan Alvarez","Caleb Floyd","Hoyt Jefferson","Russell Vega",
                                                        "Clark Salinas","Geoffrey Lawson","Ignatius Stewart","Tyrone Bradshaw",
                                                        "Quinlan Lott","Odysseus Howe","Kibo Zamora","Preston Wallace","Andrew Talley","Thor Bean",
-                                                       "Upton Hardy","Xanthus Garner","Lewis Mack","Alfonso Tanner","Francis Hansen","Xanthus Ochoa","Wesley Campos",
-                                                       "Chester Sparks","Ferris Nunez","Baxter Schmidt","Len Barr","Quinn Sloan","Cedric Brewer","Craig Bryan",
-                                                       "Aquila Tanner","Cade Nolan","Elmo Mcclain","Carter Reeves","Yasir Wolf","Otto Simmons","Timon Faulkner",
-                                                       "Craig Craft","Kyle Skinner","Joel Burton","Lars Small","Ulysses Carson","Aladdin Valentine","Donovan Kramer","Silas Scott",
-                                                       "Jesse Lancaster","Warren Norman","Kadeem Odonnell","Jesse Cross","Denton Coffey","Orson Justice","Fulton Carter","Emerson Payne","Brett Forbes",
-                                                       "Chaney Stark","Prescott Guerra","Boris Hartman","Nash White",
-                                                       "Merritt Blake","Hyatt Foreman","Allistair Wells","Coby Miranda","Colorado Lynch","Shad Joyce","Cole Merrill","Neville Case","Valentine Munoz",
-                                                       "Raphael Valenzuela","Tobias Wiggins","Gabriel Short","Zeph Santiago","Dennis Young","Xavier Morrow"});
+                                                       });
         Random rnd = new Random();
 
         private List<string> RandomNombres(List<string> list_nombres)
@@ -373,6 +383,10 @@ namespace WindowsFormsApp1
             Application.Run(new Principal());
 
             //p.servicios_x_agentes
+
+
+
+
             //Pedido p1 = new Pedido(00, "Jorge", "RCE", "9:30", "Lunes");
             //Pedido p2 = new Pedido(01, "Mario", "ICE", "15:30", "Martes");
             //Pedido p3 = new Pedido(03, "Carlos", "ILA", "19:30", "Miercoles");
@@ -409,9 +423,10 @@ namespace WindowsFormsApp1
             //Agente a11 = new Agente("11", "", data4);
 
             //Agente[] lista_a = { a1, a2, a3 /*,a4,a5,a6,a7,a8,a9,a10,a11*/};
-            //int cant = 100;
-            //Agente[] lista_a = p.read_agenteXML(direccion + @"\agentes.xml", "Agentes").ToArray();
-            //Pedido[] lista_p = p.read_clienteXML(direccion + @"\clientes.xml", "Clientes").ToArray();
+            //int cant =20;
+
+            ////Agente[] lista_a = p.read_agenteXML(direccion + @"\agentes.xml", "Agentes").ToArray();
+            ////Pedido[] lista_p = p.read_clienteXML(direccion + @"\clientes.xml", "Clientes").ToArray();
             //Genetico g = new Genetico(lista_a, lista_p, cant);
             //Individuo i = g.obtener_Mejor();
             //Console.WriteLine(i.get_Fitness(lista_a, lista_p));

@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
             recEngine.LoadGrammarAsync(grammar);
 
 
-            pBuild.AppendText("Hello");
+            pBuild.AppendText("Hello, welcome to the order distribution system");
             sSynth.Speak(pBuild);
             pBuild.ClearContent();
 
@@ -48,7 +48,7 @@ namespace WindowsFormsApp1
             recEngine.SpeechRecognized += recEngine_SpeechRecognized;
             agent = new Thread(agenteVoz);
             agent.Start();
-            agent.Abort();
+      
             
         }
 
@@ -85,10 +85,13 @@ namespace WindowsFormsApp1
                     picture_rojo.Visible = true;
                     // ponerle delay :c 
                     agent.Abort();
+                   
+
                     Funciones form_funciones = new Funciones(); // se llama el form funciones (hay que cambiarle de nombre)
                     form_funciones.Visible = true;
 
                     this.Visible = false;
+
 
                     break;
                 case "hello":
@@ -114,8 +117,8 @@ namespace WindowsFormsApp1
             Console.WriteLine(accion);
             switch (accion)
             {
-                case "iniciar":
-                    Console.WriteLine("LA PUTA AMA");
+                case "start":
+             
                     picture_rojo.Visible = true;
                     // ponerle delay :c 
                     agent.Abort();
@@ -130,8 +133,8 @@ namespace WindowsFormsApp1
 
         private void boton_temporal_Click(object sender, EventArgs e)
         {
-           string texto = this.textBox_temporal.Text;
-           logica_labels(texto);
+           /*string texto = this.textBox_temporal.Text;
+           logica_labels(texto);*/
         }
     }
 }

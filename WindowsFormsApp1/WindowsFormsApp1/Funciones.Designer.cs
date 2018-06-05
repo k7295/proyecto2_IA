@@ -31,15 +31,13 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label_opciones = new System.Windows.Forms.Label();
             this.repartirOrdenes = new System.Windows.Forms.Label();
             this.mostrarOrdenes = new System.Windows.Forms.Label();
             this.mostrarAgentes = new System.Windows.Forms.Label();
-            this.boton_temporal = new System.Windows.Forms.Button();
-            this.textBox_temporal = new System.Windows.Forms.TextBox();
             this.tabla_info = new System.Windows.Forms.DataGridView();
             this.Ayuda = new System.Windows.Forms.Label();
             this.titulo_tabla = new System.Windows.Forms.Label();
@@ -70,9 +68,9 @@ namespace WindowsFormsApp1
             this.repartirOrdenes.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.repartirOrdenes.Location = new System.Drawing.Point(784, 411);
             this.repartirOrdenes.Name = "repartirOrdenes";
-            this.repartirOrdenes.Size = new System.Drawing.Size(139, 33);
+            this.repartirOrdenes.Size = new System.Drawing.Size(69, 33);
             this.repartirOrdenes.TabIndex = 5;
-            this.repartirOrdenes.Text = "Begin orders";
+            this.repartirOrdenes.Text = "Begin";
             // 
             // mostrarOrdenes
             // 
@@ -95,23 +93,6 @@ namespace WindowsFormsApp1
             this.mostrarAgentes.TabIndex = 1;
             this.mostrarAgentes.Text = "Show Agents";
             // 
-            // boton_temporal
-            // 
-            this.boton_temporal.Location = new System.Drawing.Point(647, 20);
-            this.boton_temporal.Name = "boton_temporal";
-            this.boton_temporal.Size = new System.Drawing.Size(99, 21);
-            this.boton_temporal.TabIndex = 10;
-            this.boton_temporal.Text = "Accept";
-            this.boton_temporal.UseVisualStyleBackColor = true;
-            this.boton_temporal.Click += new System.EventHandler(this.boton_temporal_Click);
-            // 
-            // textBox_temporal
-            // 
-            this.textBox_temporal.Location = new System.Drawing.Point(448, 22);
-            this.textBox_temporal.Name = "textBox_temporal";
-            this.textBox_temporal.Size = new System.Drawing.Size(185, 20);
-            this.textBox_temporal.TabIndex = 9;
-            // 
             // tabla_info
             // 
             this.tabla_info.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -119,35 +100,32 @@ namespace WindowsFormsApp1
             this.tabla_info.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tabla_info.BackgroundColor = System.Drawing.Color.White;
             this.tabla_info.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 13F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-
-            this.tabla_info.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 13F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabla_info.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.tabla_info.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 11F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tabla_info.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 11F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabla_info.DefaultCellStyle = dataGridViewCellStyle5;
             this.tabla_info.GridColor = System.Drawing.SystemColors.GrayText;
             this.tabla_info.Location = new System.Drawing.Point(19, 101);
             this.tabla_info.Margin = new System.Windows.Forms.Padding(10);
             this.tabla_info.Name = "tabla_info";
             this.tabla_info.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.tabla_info.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.tabla_info.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.tabla_info.Size = new System.Drawing.Size(614, 444);
             this.tabla_info.TabIndex = 11;
-
-            
             // 
             // Ayuda
             // 
@@ -216,8 +194,6 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.titulo_tabla);
             this.Controls.Add(this.Ayuda);
             this.Controls.Add(this.tabla_info);
-            this.Controls.Add(this.boton_temporal);
-            this.Controls.Add(this.textBox_temporal);
             this.Controls.Add(this.repartirOrdenes);
             this.Controls.Add(this.mostrarOrdenes);
             this.Controls.Add(this.mostrarAgentes);
@@ -249,8 +225,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.PictureBox picture_amarillo;
         private System.Windows.Forms.PictureBox picture_naranja;
         private System.Windows.Forms.PictureBox picture_verde;
-        private System.Windows.Forms.Button boton_temporal;
-        private System.Windows.Forms.TextBox textBox_temporal;
         private System.Windows.Forms.DataGridView tabla_info;
         private System.Windows.Forms.Label Ayuda;
         private System.Windows.Forms.PictureBox ayuda_colores;

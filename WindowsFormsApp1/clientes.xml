@@ -3,275 +3,275 @@
   <Cliente>
     <ID>0</ID>
     <Nombre>Fulano Mengano</Nombre>
-    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
-    <Dia>Miercoles</Dia>
-    <Hora>11:00</Hora>
+    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
+    <Dia>Martes</Dia>
+    <Hora>7:00</Hora>
   </Cliente>
   <Cliente>
     <ID>1</ID>
     <Nombre>Colton Ramos</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>9:00</Hora>
+    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
+    <Dia>Martes</Dia>
+    <Hora>10:00</Hora>
   </Cliente>
   <Cliente>
     <ID>2</ID>
     <Nombre>Stuart Mcguire</Nombre>
-    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
-    <Dia>Miercoles</Dia>
-    <Hora>8:00</Hora>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
+    <Dia>Lunes</Dia>
+    <Hora>9:00</Hora>
   </Cliente>
   <Cliente>
     <ID>3</ID>
     <Nombre>Hoyt Wilkerson</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Miercoles</Dia>
-    <Hora>8:30</Hora>
+    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
+    <Dia>Lunes</Dia>
+    <Hora>10:00</Hora>
   </Cliente>
   <Cliente>
     <ID>4</ID>
     <Nombre>Nissim Dennis</Nombre>
-    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
+    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
     <Dia>Lunes</Dia>
-    <Hora>8:00</Hora>
+    <Hora>11:00</Hora>
   </Cliente>
   <Cliente>
     <ID>5</ID>
     <Nombre>Dalton Serrano</Nombre>
     <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
     <Dia>Lunes</Dia>
-    <Hora>7:00</Hora>
+    <Hora>2:00</Hora>
   </Cliente>
   <Cliente>
     <ID>6</ID>
     <Nombre>Daquan Waters</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>2:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>7</ID>
-    <Nombre>Byron Roman</Nombre>
-    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
+    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
     <Dia>Jueves</Dia>
     <Hora>1:30</Hora>
   </Cliente>
   <Cliente>
+    <ID>7</ID>
+    <Nombre>Byron Roman</Nombre>
+    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
+    <Dia>Lunes</Dia>
+    <Hora>9:30</Hora>
+  </Cliente>
+  <Cliente>
     <ID>8</ID>
     <Nombre>Caldwell Soto</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
+    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
     <Dia>Jueves</Dia>
-    <Hora>3:00</Hora>
+    <Hora>11:00</Hora>
   </Cliente>
   <Cliente>
     <ID>9</ID>
     <Nombre>Rudyard Fitzgerald</Nombre>
-    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>10:00</Hora>
+    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
+    <Dia>Martes</Dia>
+    <Hora>7:30</Hora>
   </Cliente>
   <Cliente>
     <ID>10</ID>
     <Nombre>Kato Gardner</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>7:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>11</ID>
-    <Nombre>Cody Cantu</Nombre>
-    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>7:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>12</ID>
-    <Nombre>Eric Duke</Nombre>
     <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
     <Dia>Martes</Dia>
     <Hora>9:00</Hora>
   </Cliente>
   <Cliente>
-    <ID>13</ID>
-    <Nombre>Rogan Fleming</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
+    <ID>11</ID>
+    <Nombre>Cody Cantu</Nombre>
+    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
     <Dia>Martes</Dia>
     <Hora>3:00</Hora>
+  </Cliente>
+  <Cliente>
+    <ID>12</ID>
+    <Nombre>Eric Duke</Nombre>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
+    <Dia>Jueves</Dia>
+    <Hora>11:00</Hora>
+  </Cliente>
+  <Cliente>
+    <ID>13</ID>
+    <Nombre>Rogan Fleming</Nombre>
+    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
+    <Dia>Lunes</Dia>
+    <Hora>8:00</Hora>
   </Cliente>
   <Cliente>
     <ID>14</ID>
     <Nombre>Hop Nixon</Nombre>
     <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>8:00</Hora>
+    <Dia>Martes</Dia>
+    <Hora>10:00</Hora>
   </Cliente>
   <Cliente>
     <ID>15</ID>
     <Nombre>Caldwell Brooks</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
+    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
     <Dia>Miercoles</Dia>
-    <Hora>9:00</Hora>
+    <Hora>1:00</Hora>
   </Cliente>
   <Cliente>
     <ID>16</ID>
     <Nombre>Julian Roman</Nombre>
-    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>10:30</Hora>
+    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
+    <Dia>Martes</Dia>
+    <Hora>2:30</Hora>
   </Cliente>
   <Cliente>
     <ID>17</ID>
     <Nombre>Dustin Mercado</Nombre>
-    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>7:00</Hora>
+    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
+    <Dia>Miercoles</Dia>
+    <Hora>8:00</Hora>
   </Cliente>
   <Cliente>
     <ID>18</ID>
     <Nombre>Wylie Mcneil</Nombre>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
+    <Dia>Jueves</Dia>
+    <Hora>8:30</Hora>
+  </Cliente>
+  <Cliente>
+    <ID>19</ID>
+    <Nombre>Elmo Buck</Nombre>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
+    <Dia>Jueves</Dia>
+    <Hora>10:00</Hora>
+  </Cliente>
+  <Cliente>
+    <ID>20</ID>
+    <Nombre>Callum Lambert</Nombre>
     <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
     <Dia>Martes</Dia>
     <Hora>2:00</Hora>
   </Cliente>
   <Cliente>
-    <ID>19</ID>
-    <Nombre>Elmo Buck</Nombre>
-    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>9:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>20</ID>
-    <Nombre>Callum Lambert</Nombre>
-    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
-    <Dia>Martes</Dia>
-    <Hora>1:00</Hora>
-  </Cliente>
-  <Cliente>
     <ID>21</ID>
     <Nombre>Cedric Cooke</Nombre>
-    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
+    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
     <Dia>Lunes</Dia>
-    <Hora>10:30</Hora>
+    <Hora>11:30</Hora>
   </Cliente>
   <Cliente>
     <ID>22</ID>
     <Nombre>Kaseem Weber</Nombre>
     <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Martes</Dia>
-    <Hora>8:00</Hora>
+    <Dia>Jueves</Dia>
+    <Hora>2:30</Hora>
   </Cliente>
   <Cliente>
     <ID>23</ID>
     <Nombre>Armando Waters</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
     <Dia>Miercoles</Dia>
-    <Hora>11:30</Hora>
+    <Hora>9:00</Hora>
   </Cliente>
   <Cliente>
     <ID>24</ID>
     <Nombre>Victor Camacho</Nombre>
-    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
+    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
+    <Dia>Martes</Dia>
     <Hora>2:00</Hora>
   </Cliente>
   <Cliente>
     <ID>25</ID>
     <Nombre>Gabriel Roach</Nombre>
-    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
     <Dia>Martes</Dia>
-    <Hora>1:30</Hora>
+    <Hora>2:00</Hora>
   </Cliente>
   <Cliente>
     <ID>26</ID>
     <Nombre>Graham Wise</Nombre>
-    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>9:00</Hora>
+    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
+    <Dia>Miercoles</Dia>
+    <Hora>8:30</Hora>
   </Cliente>
   <Cliente>
     <ID>27</ID>
     <Nombre>Ferris Carroll</Nombre>
-    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
-    <Dia>Miercoles</Dia>
-    <Hora>1:30</Hora>
+    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
+    <Dia>Martes</Dia>
+    <Hora>2:30</Hora>
   </Cliente>
   <Cliente>
     <ID>28</ID>
     <Nombre>Edan Alvarez</Nombre>
-    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
+    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
     <Dia>Lunes</Dia>
-    <Hora>8:00</Hora>
+    <Hora>1:30</Hora>
   </Cliente>
   <Cliente>
     <ID>29</ID>
     <Nombre>Caleb Floyd</Nombre>
     <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>11:30</Hora>
+    <Dia>Miercoles</Dia>
+    <Hora>9:30</Hora>
   </Cliente>
   <Cliente>
     <ID>30</ID>
     <Nombre>Hoyt Jefferson</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Miercoles</Dia>
-    <Hora>8:30</Hora>
+    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
+    <Dia>Jueves</Dia>
+    <Hora>2:00</Hora>
   </Cliente>
   <Cliente>
     <ID>31</ID>
     <Nombre>Russell Vega</Nombre>
     <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>1:30</Hora>
+    <Dia>Martes</Dia>
+    <Hora>11:30</Hora>
   </Cliente>
   <Cliente>
     <ID>32</ID>
     <Nombre>Clark Salinas</Nombre>
     <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>3:00</Hora>
+    <Dia>Miercoles</Dia>
+    <Hora>8:30</Hora>
   </Cliente>
   <Cliente>
     <ID>33</ID>
     <Nombre>Geoffrey Lawson</Nombre>
     <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>8:30</Hora>
+    <Dia>Martes</Dia>
+    <Hora>1:00</Hora>
   </Cliente>
   <Cliente>
     <ID>34</ID>
     <Nombre>Ignatius Stewart</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Miercoles</Dia>
-    <Hora>9:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>35</ID>
-    <Nombre>Tyrone Bradshaw</Nombre>
     <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
     <Dia>Martes</Dia>
     <Hora>2:00</Hora>
   </Cliente>
   <Cliente>
+    <ID>35</ID>
+    <Nombre>Tyrone Bradshaw</Nombre>
+    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
+    <Dia>Lunes</Dia>
+    <Hora>9:30</Hora>
+  </Cliente>
+  <Cliente>
     <ID>36</ID>
     <Nombre>Quinlan Lott</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
+    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
     <Dia>Lunes</Dia>
-    <Hora>3:00</Hora>
+    <Hora>10:30</Hora>
   </Cliente>
   <Cliente>
     <ID>37</ID>
     <Nombre>Odysseus Howe</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>9:00</Hora>
+    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
+    <Dia>Miercoles</Dia>
+    <Hora>8:30</Hora>
   </Cliente>
   <Cliente>
     <ID>38</ID>
     <Nombre>Kibo Zamora</Nombre>
     <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Miercoles</Dia>
-    <Hora>1:30</Hora>
+    <Dia>Lunes</Dia>
+    <Hora>2:30</Hora>
   </Cliente>
   <Cliente>
     <ID>39</ID>
@@ -283,414 +283,15 @@
   <Cliente>
     <ID>40</ID>
     <Nombre>Andrew Talley</Nombre>
-    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
+    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
     <Dia>Lunes</Dia>
-    <Hora>9:30</Hora>
+    <Hora>9:00</Hora>
   </Cliente>
   <Cliente>
     <ID>41</ID>
     <Nombre>Thor Bean</Nombre>
     <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
     <Dia>Jueves</Dia>
-    <Hora>3:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>42</ID>
-    <Nombre>Upton Hardy</Nombre>
-    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
-    <Dia>Miercoles</Dia>
-    <Hora>9:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>43</ID>
-    <Nombre>Xanthus Garner</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Miercoles</Dia>
-    <Hora>9:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>44</ID>
-    <Nombre>Lewis Mack</Nombre>
-    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>2:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>45</ID>
-    <Nombre>Alfonso Tanner</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Miercoles</Dia>
-    <Hora>8:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>46</ID>
-    <Nombre>Francis Hansen</Nombre>
-    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>1:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>47</ID>
-    <Nombre>Xanthus Ochoa</Nombre>
-    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>2:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>48</ID>
-    <Nombre>Wesley Campos</Nombre>
-    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>10:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>49</ID>
-    <Nombre>Chester Sparks</Nombre>
-    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>8:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>50</ID>
-    <Nombre>Ferris Nunez</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Martes</Dia>
-    <Hora>8:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>51</ID>
-    <Nombre>Baxter Schmidt</Nombre>
-    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
-    <Dia>Martes</Dia>
-    <Hora>2:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>52</ID>
-    <Nombre>Len Barr</Nombre>
-    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
-    <Dia>Miercoles</Dia>
     <Hora>11:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>53</ID>
-    <Nombre>Quinn Sloan</Nombre>
-    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
-    <Dia>Martes</Dia>
-    <Hora>11:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>54</ID>
-    <Nombre>Cedric Brewer</Nombre>
-    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>10:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>55</ID>
-    <Nombre>Craig Bryan</Nombre>
-    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
-    <Dia>Martes</Dia>
-    <Hora>9:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>56</ID>
-    <Nombre>Aquila Tanner</Nombre>
-    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>7:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>57</ID>
-    <Nombre>Cade Nolan</Nombre>
-    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
-    <Dia>Miercoles</Dia>
-    <Hora>1:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>58</ID>
-    <Nombre>Elmo Mcclain</Nombre>
-    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>8:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>59</ID>
-    <Nombre>Carter Reeves</Nombre>
-    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>2:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>60</ID>
-    <Nombre>Yasir Wolf</Nombre>
-    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
-    <Dia>Martes</Dia>
-    <Hora>1:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>61</ID>
-    <Nombre>Otto Simmons</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>9:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>62</ID>
-    <Nombre>Timon Faulkner</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>11:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>63</ID>
-    <Nombre>Craig Craft</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>3:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>64</ID>
-    <Nombre>Kyle Skinner</Nombre>
-    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>11:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>65</ID>
-    <Nombre>Joel Burton</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>1:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>66</ID>
-    <Nombre>Lars Small</Nombre>
-    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>2:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>67</ID>
-    <Nombre>Ulysses Carson</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Miercoles</Dia>
-    <Hora>3:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>68</ID>
-    <Nombre>Aladdin Valentine</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Martes</Dia>
-    <Hora>11:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>69</ID>
-    <Nombre>Donovan Kramer</Nombre>
-    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
-    <Dia>Miercoles</Dia>
-    <Hora>9:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>70</ID>
-    <Nombre>Silas Scott</Nombre>
-    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
-    <Dia>Martes</Dia>
-    <Hora>1:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>71</ID>
-    <Nombre>Jesse Lancaster</Nombre>
-    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>3:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>72</ID>
-    <Nombre>Warren Norman</Nombre>
-    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
-    <Dia>Martes</Dia>
-    <Hora>7:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>73</ID>
-    <Nombre>Kadeem Odonnell</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Martes</Dia>
-    <Hora>10:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>74</ID>
-    <Nombre>Jesse Cross</Nombre>
-    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
-    <Dia>Martes</Dia>
-    <Hora>2:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>75</ID>
-    <Nombre>Denton Coffey</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>1:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>76</ID>
-    <Nombre>Orson Justice</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>7:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>77</ID>
-    <Nombre>Fulton Carter</Nombre>
-    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>2:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>78</ID>
-    <Nombre>Emerson Payne</Nombre>
-    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
-    <Dia>Martes</Dia>
-    <Hora>2:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>79</ID>
-    <Nombre>Brett Forbes</Nombre>
-    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>11:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>80</ID>
-    <Nombre>Chaney Stark</Nombre>
-    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
-    <Dia>Miercoles</Dia>
-    <Hora>7:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>81</ID>
-    <Nombre>Prescott Guerra</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Martes</Dia>
-    <Hora>2:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>82</ID>
-    <Nombre>Boris Hartman</Nombre>
-    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>7:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>83</ID>
-    <Nombre>Nash White</Nombre>
-    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>11:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>84</ID>
-    <Nombre>Merritt Blake</Nombre>
-    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
-    <Dia>Martes</Dia>
-    <Hora>11:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>85</ID>
-    <Nombre>Hyatt Foreman</Nombre>
-    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
-    <Dia>Martes</Dia>
-    <Hora>8:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>86</ID>
-    <Nombre>Allistair Wells</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>10:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>87</ID>
-    <Nombre>Coby Miranda</Nombre>
-    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
-    <Dia>Martes</Dia>
-    <Hora>11:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>88</ID>
-    <Nombre>Colorado Lynch</Nombre>
-    <Codigo_de_Servicio>ICG</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>9:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>89</ID>
-    <Nombre>Shad Joyce</Nombre>
-    <Codigo_de_Servicio>RCG</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>10:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>90</ID>
-    <Nombre>Cole Merrill</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>9:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>91</ID>
-    <Nombre>Neville Case</Nombre>
-    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
-    <Dia>Lunes</Dia>
-    <Hora>2:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>92</ID>
-    <Nombre>Valentine Munoz</Nombre>
-    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
-    <Dia>Miercoles</Dia>
-    <Hora>2:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>93</ID>
-    <Nombre>Raphael Valenzuela</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>8:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>94</ID>
-    <Nombre>Tobias Wiggins</Nombre>
-    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
-    <Dia>Martes</Dia>
-    <Hora>2:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>95</ID>
-    <Nombre>Gabriel Short</Nombre>
-    <Codigo_de_Servicio>ILA</Codigo_de_Servicio>
-    <Dia>Miercoles</Dia>
-    <Hora>10:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>96</ID>
-    <Nombre>Zeph Santiago</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Miercoles</Dia>
-    <Hora>3:00</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>97</ID>
-    <Nombre>Dennis Young</Nombre>
-    <Codigo_de_Servicio>RCE</Codigo_de_Servicio>
-    <Dia>Miercoles</Dia>
-    <Hora>2:30</Hora>
-  </Cliente>
-  <Cliente>
-    <ID>98</ID>
-    <Nombre>Xavier Morrow</Nombre>
-    <Codigo_de_Servicio>ICE</Codigo_de_Servicio>
-    <Dia>Jueves</Dia>
-    <Hora>8:00</Hora>
   </Cliente>
 </Clientes>

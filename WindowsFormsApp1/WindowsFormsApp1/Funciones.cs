@@ -19,8 +19,8 @@ namespace WindowsFormsApp1
     public partial class Funciones : Form
     {
         Manejador_XML funcionesXML = new Manejador_XML();
-        // static string direccion = @"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1";
-        static string direccion = @"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1";
+         static string direccion = @"E:\GitHubProyectos\proyecto2_IA\WindowsFormsApp1";
+        //static string direccion = @"\Users\Karen\Documents\IA\ProyectoII\proyecto2_IA\WindowsFormsApp1";
          //List<string> _names = new List<string>();
          System.Windows.Forms.Timer timRun = new System.Windows.Forms.Timer();
         SpeechRecognitionEngine recEngine = new SpeechRecognitionEngine();
@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
         ///// Contains column data arrays.
         ///// </summary>
         //List<double[]> _dataArray = new List<double[]>();
-        
+        int working = 0;
          
 
         public Funciones()
@@ -41,12 +41,16 @@ namespace WindowsFormsApp1
             InitializeComponent();
             this.CenterToScreen();
             colores_iniciales();
+
+            
+
             Choices commands = new Choices();
-            commands.Add(new string[] { "show agents", "show orders", "begin orders", "instructions" });
+            commands.Add(new string[] { "show agents", "show orders", "begin", "instructions" });
             gBuilder = new GrammarBuilder();
             gBuilder.Append(commands);
 
             Grammar grammar = new Grammar(gBuilder);
+
 
             recEngine.LoadGrammarAsync(grammar);
 
@@ -54,8 +58,14 @@ namespace WindowsFormsApp1
 
             recEngine.SpeechRecognized += recEngine_SpeechRecognized;
             agent = new Thread(agenteVoz);
+
+
+            pBuild.AppendText("The instructions are, show agents, show orders, and begin");
+            sSynth.Speak(pBuild);
+            pBuild.ClearContent();
+
             agent.Start();
-            agent.Abort();
+            
 
 
             // List<Agente> informacion = p.read_agenteXML(@"\Users\Karen\Documents\IA\Proyecto2\WindowsFormsApp1\agentes.xml", "Agentes");
@@ -69,10 +79,24 @@ namespace WindowsFormsApp1
         public void agenteVoz()
         {
             DateTime localDate = DateTime.Now;
-
-            pBuild.AppendText("Waiting for instructions");
-            sSynth.Speak(pBuild);
-            pBuild.ClearContent();
+            if (working == 0)
+            {
+                lock (pBuild)
+                {
+                    pBuild.AppendText("Waiting for instructions");
+                    sSynth.Speak(pBuild);
+                    pBuild.ClearContent();
+                }
+            }
+            else
+            {
+                lock (pBuild)
+                {
+                    pBuild.AppendText("Working on the algorithm");
+                    sSynth.Speak(pBuild);
+                    pBuild.ClearContent();
+                }
+            }
 
             recEngine.RecognizeAsync();
 
@@ -80,7 +104,7 @@ namespace WindowsFormsApp1
             while (true)
             {
                 DateTime localDatenew = DateTime.Now;
-                if ((localDatenew - localDate).TotalSeconds > 5)
+                if ((localDatenew - localDate).TotalSeconds > 6)
                 {
                     break;
                 }
@@ -95,6 +119,12 @@ namespace WindowsFormsApp1
             switch (er.Result.Text)
             {
                 case "show agents":
+                    lock (pBuild)
+                    {
+                        pBuild.AppendText("Showing Agents");
+                        sSynth.Speak(pBuild);
+                        pBuild.ClearContent();
+                    }
                     Console.WriteLine("mostrar agentes");
                     this.titulo_tabla.Visible = true;
                     titulo_tabla.Text = "Agents";
@@ -107,6 +137,12 @@ namespace WindowsFormsApp1
                     tabla_info.DataSource = set_tabla_agentes(nombre_columnas, informacion);
                     break;
                 case "show orders":
+                    lock (pBuild)
+                    {
+                        pBuild.AppendText("Showing Orders");
+                        sSynth.Speak(pBuild);
+                        pBuild.ClearContent();
+                    }
                     Console.WriteLine("mostrar ordenes");
                     this.titulo_tabla.Visible = true;
                     titulo_tabla.Text = "Orders";
@@ -116,28 +152,47 @@ namespace WindowsFormsApp1
                     List<string> nombre_columnas_ordenes = funcionesXML.get_columns_ordenes(direccion + @"\clientes.xml");
                     tabla_info.DataSource = set_tabla_ordenes(nombre_columnas_ordenes, informacion_ordenes);
                     break;
-                case "begin orders":
-                    Console.WriteLine("repartir ordenes");
-                    this.titulo_tabla.Visible = true;
-                    titulo_tabla.Text = "Repartir ordenes";
-                    repartirOrdenes.Image = global::WindowsFormsApp1.Properties.Resources.verde;
-                    picture_verde.Image = global::WindowsFormsApp1.Properties.Resources.verde;
-                    int cant = 50;
-                    Agente[] lista_a = funcionesXML.read_agenteXML(direccion + @"\agentes.xml", "Agentes").ToArray();
-                    Pedido[] lista_p = funcionesXML.read_clienteXML(direccion + @"\clientes.xml", "Clientes").ToArray();
-                    Genetico g = new Genetico(lista_a, lista_p, cant);
-                    Individuo i = g.obtener_Mejor();
-                    Console.WriteLine(i.get_Fitness(lista_a, lista_p));
-                    List<Agente> lista_agentes = g.deme_agentes();
-                    List<string> nombre_columnas_repartir = new List<string>(new string[] { "ID", "Nombre", "Ordenes", "Comision", "Hora" });
-                    tabla_info.DataSource = set_tabla_repatir(nombre_columnas_repartir, lista_agentes);
+                case "begin":
+                    
+                    if (working == 0)
+                    {
+                        working = 1;
+                        
+
+                        Console.WriteLine("repartir ordenes");
+                        this.titulo_tabla.Visible = true;
+                        titulo_tabla.Text = "Repartir ordenes";
+                        repartirOrdenes.Image = global::WindowsFormsApp1.Properties.Resources.verde;
+                        picture_verde.Image = global::WindowsFormsApp1.Properties.Resources.verde;
+                        int cant = 20;
+                        Agente[] lista_a = funcionesXML.read_agenteXML(direccion + @"\agentes.xml", "Agentes").ToArray();
+                        Pedido[] lista_p = funcionesXML.read_clienteXML(direccion + @"\clientes.xml", "Clientes").ToArray();
+                        Genetico g = new Genetico(lista_a, lista_p, cant);
+                        Individuo i = g.obtener_Mejor();
+                        Console.WriteLine(i.get_Fitness(lista_a, lista_p));
+                        List<Agente> lista_agentes = g.deme_agentes();
+                        List<string> nombre_columnas_repartir = new List<string>(new string[] { "ID", "Nombre", "Ordenes", "Comision", "Hora" });
+                        tabla_info.DataSource = set_tabla_repatir(nombre_columnas_repartir, lista_agentes);
+                        working = 0;
+
+                        lock (pBuild)
+                        {
+                            pBuild.AppendText("Algorithm finished");
+                            sSynth.Speak(pBuild);
+                            pBuild.ClearContent();
+                        }
+                    }
                     break;
                 case "instructions":
                     repartirOrdenes.Image = global::WindowsFormsApp1.Properties.Resources.verde;
                     picture_verde.Image = global::WindowsFormsApp1.Properties.Resources.verde;
-                    pBuild.AppendText("The instructions are, show agents, show services, and begin orders");
-                    sSynth.Speak(pBuild);
-                    pBuild.ClearContent();
+                    lock (pBuild)
+                    {
+                        pBuild.AppendText("The instructions are, show agents, show orders, and begin");
+                        sSynth.Speak(pBuild);
+                        pBuild.ClearContent();
+                    }
+                  
                     break;
 
 
@@ -297,7 +352,7 @@ namespace WindowsFormsApp1
                     titulo_tabla.Text = "Repartir ordenes";
                     repartirOrdenes.Image = global::WindowsFormsApp1.Properties.Resources.verde;
                     picture_verde.Image = global::WindowsFormsApp1.Properties.Resources.verde;
-                    int cant = 100;
+                    int cant = 20;
                     Agente[] lista_a = funcionesXML.read_agenteXML(direccion + @"\agentes.xml", "Agentes").ToArray();
                     Pedido[] lista_p = funcionesXML.read_clienteXML(direccion + @"\clientes.xml", "Clientes").ToArray();
                     Genetico g = new Genetico(lista_a, lista_p, cant);
@@ -310,6 +365,9 @@ namespace WindowsFormsApp1
 
                 case "instructions":
                     Console.WriteLine("ayuda");
+                    pBuild.AppendText("The instructions are, show agents, show services, and begin orders");
+                    sSynth.Speak(pBuild);
+                    pBuild.ClearContent();
                     Ayuda.Image = global::WindowsFormsApp1.Properties.Resources.ayuda;
                     ayuda_colores.Visible = true;
                     break;
@@ -340,8 +398,8 @@ namespace WindowsFormsApp1
         }
         private void boton_temporal_Click(object sender, EventArgs e)
         {
-            string texto = this.textBox_temporal.Text;
-            logica_labels(texto);
+            /*string texto = this.textBox_temporal.Text;
+            logica_labels(texto);*/
         }
 
     }

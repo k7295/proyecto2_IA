@@ -34,28 +34,29 @@ namespace WindowsFormsApp1.Geneticos
             return patron;
         }
 
-       
         private Individuo crear_Individuo_Aleatorio()
         {
             int[] suma_horas = this.crear_Array(this.lista_agentes.Length);
             int[] data = new int[this.lista_pedidos.Length];
-            ArrayList lista_tipos_servicios = this.obtener_Listas_Agentes_Tipos();
-            for (int i = 0; i < data.Length; i++)   // se debe optimizar ese for
+
+
+
+
+            for (int i = 0; i < data.Length; i++)
             {
                 Pedido p = lista_pedidos[i];
-                //ArrayList lista_tipos_servicios1 = lista_tipos_servicios;
+                ArrayList lista_tipos_servicios = this.obtener_Listas_Agentes_Tipos();
                 ArrayList lista_actuales = this.obtener_Lista_Unico_Servicio(lista_tipos_servicios, p.Codigo_servicio);
 
                 Horario h = new Horario(this.lista_agentes.Length);
 
                 bool listo = false;
-                ArrayList lista_actuales_temp = lista_actuales;
                 while (!listo)
                 {
                     if (lista_actuales.Count != 0)
                     {
-                        
-                        int indice_agente_random = (int)lista_actuales[this.rand.Next(lista_actuales_temp.Count)];
+                        int indice_agente_random = (int)lista_actuales[this.rand.Next(lista_actuales.Count)];
+                        //int indice_agente_random = rand.Next(0, lista_actuales.Count);
                         if (suma_horas[indice_agente_random] + p.get_Tiempo() <= 40)
                         {
                             if (h.horasLibres(indice_agente_random, p))
@@ -67,15 +68,13 @@ namespace WindowsFormsApp1.Geneticos
                             }
                             else
                             {
-                                lista_actuales_temp.RemoveAt(indice_agente_random);
-                                //lista_actuales_temp = lista_actuales;
-
+                                data[i] = -1;
+                                listo = true;
                             }
                         }
                         else
                         {
-                            lista_actuales_temp.RemoveAt(indice_agente_random);
-                            //lista_actuales_temp = lista_actuales;
+                            lista_actuales.RemoveAt(indice_agente_random);
                         }
                     }
                     else
@@ -336,7 +335,7 @@ namespace WindowsFormsApp1.Geneticos
         private void next_Generacion()
         {
             Individuo[] nueva_Generacion = new Individuo[this.poblacion.Length];
-            bool[] patron = this.generar_patron_random(this.poblacion.Length);
+            bool[] patron = this.generar_patron_random(this.lista_pedidos.Length);
 
             int tercio = this.poblacion.Length / 3;
             // Console.Out.WriteLine("soy un tercio " + tercio);
@@ -439,14 +438,14 @@ namespace WindowsFormsApp1.Geneticos
             {
                 lista.Add(this.lista_agentes[i]);
             }
-            
+
             for (int i = 0; i < mejor.Data.Length; i++)
             {
                 Console.WriteLine(mejor.Data[i]);
                 if (mejor.Data[i] != -1)
-                {   
+                {
                     lista[mejor.Data[i]].add_Orden(this.lista_pedidos[i]);
-                    
+
                 }
             }
             return lista;

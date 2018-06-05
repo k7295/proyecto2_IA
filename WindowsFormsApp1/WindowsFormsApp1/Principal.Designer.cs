@@ -31,8 +31,6 @@
             this.Titulo_GE = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox_temporal = new System.Windows.Forms.TextBox();
-            this.boton_temporal = new System.Windows.Forms.Button();
             this.label_iniciar = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picture_rojo = new System.Windows.Forms.PictureBox();
@@ -71,23 +69,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Please follow all the instructions";
             // 
-            // textBox_temporal
-            // 
-            this.textBox_temporal.Location = new System.Drawing.Point(310, 248);
-            this.textBox_temporal.Name = "textBox_temporal";
-            this.textBox_temporal.Size = new System.Drawing.Size(185, 20);
-            this.textBox_temporal.TabIndex = 5;
-            // 
-            // boton_temporal
-            // 
-            this.boton_temporal.Location = new System.Drawing.Point(509, 246);
-            this.boton_temporal.Name = "boton_temporal";
-            this.boton_temporal.Size = new System.Drawing.Size(99, 21);
-            this.boton_temporal.TabIndex = 6;
-            this.boton_temporal.Text = "Accept";
-            this.boton_temporal.UseVisualStyleBackColor = true;
-            this.boton_temporal.Click += new System.EventHandler(this.boton_temporal_Click);
-            // 
             // label_iniciar
             // 
             this.label_iniciar.AutoSize = true;
@@ -124,8 +105,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(839, 426);
-            this.Controls.Add(this.boton_temporal);
-            this.Controls.Add(this.textBox_temporal);
             this.Controls.Add(this.label_iniciar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
@@ -149,8 +128,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label_iniciar;
-        private System.Windows.Forms.TextBox textBox_temporal;
-        private System.Windows.Forms.Button boton_temporal;
         private System.Windows.Forms.PictureBox picture_rojo;
     }
 }
