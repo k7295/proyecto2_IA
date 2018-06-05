@@ -60,7 +60,7 @@ namespace WindowsFormsApp1
             agent = new Thread(agenteVoz);
 
 
-            pBuild.AppendText("The instructions are, show agents, show orders, and begin");
+            pBuild.AppendText("The instructions are, show agents to show all the agents, show orders to show all the orders made, and begin to start distributing the orders");
             sSynth.Speak(pBuild);
             pBuild.ClearContent();
 
@@ -188,7 +188,7 @@ namespace WindowsFormsApp1
                     picture_verde.Image = global::WindowsFormsApp1.Properties.Resources.verde;
                     lock (pBuild)
                     {
-                        pBuild.AppendText("The instructions are, show agents, show orders, and begin");
+                        pBuild.AppendText("The instructions are, show agents to show all the agents, show orders to show all the orders made, and begin to start distributing the orders");
                         sSynth.Speak(pBuild);
                         pBuild.ClearContent();
                     }
@@ -365,7 +365,7 @@ namespace WindowsFormsApp1
 
                 case "instructions":
                     Console.WriteLine("ayuda");
-                    pBuild.AppendText("The instructions are, show agents, show services, and begin orders");
+                    pBuild.AppendText("The instructions are, show agents to show all the agents, show orders to show all the orders made, and begin to start distributing the orders");
                     sSynth.Speak(pBuild);
                     pBuild.ClearContent();
                     Ayuda.Image = global::WindowsFormsApp1.Properties.Resources.ayuda;
